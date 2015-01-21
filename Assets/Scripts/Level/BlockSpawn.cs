@@ -9,7 +9,17 @@ namespace Level
 
 		void Awake()
 		{
+			StartSpawn();
+		}
+
+		public void StartSpawn()
+		{
 			InvokeRepeating("Spawn", 0, 1);
+		}
+
+		public void StopSpawn()
+		{
+			CancelInvoke("Spawn");
 		}
 
 		void Spawn()
