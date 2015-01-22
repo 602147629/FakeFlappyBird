@@ -5,7 +5,7 @@ using System;
 
 namespace View
 {
-	public class WelcomeView : MonoBehaviour, IWelcomeView {
+	public class WelcomeView : MonoView, IWelcomeView {
 
 		public Button startGameBtn;
 

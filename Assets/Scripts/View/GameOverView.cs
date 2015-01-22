@@ -5,7 +5,7 @@ using System;
 
 namespace View
 {
-	public class GameOverView : MonoBehaviour, IGameOverView {
+	public class GameOverView : MonoView, IGameOverView {
 
 		public Button restartBtn;
 		public Button exitBtn;
