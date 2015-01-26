@@ -19,6 +19,12 @@ public interface IViewFlow
 	/// </summary>
 	/// <param name="viewName">View name.</param>
 	IView Back(string viewName);
+
+	/// <summary>
+	/// Gets the current view.
+	/// </summary>
+	/// <value>The current view.</value>
+	IView CurrentView { get; }
 }
 
 

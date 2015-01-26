@@ -1,15 +1,15 @@
 using UnityEngine;
-namespace Character
+using CX.U3D.Character;
+
+public class CharacterDead : MonoBehaviour
 {
-	public class CharacterDead : MonoBehaviour
+	void OnTriggerEnter(Collider other) 
 	{
-		void OnTriggerEnter(Collider other) 
+		if (other.tag == "Blocker")
 		{
-			if (other.tag == "Blocker")
-			{
-				Debug.Log("DEAD!!!");
-			}
+			GetComponent<U3DCharacter>().Life.Dead();
 		}
 	}
 }
+
 

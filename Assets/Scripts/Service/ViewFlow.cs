@@ -40,6 +40,14 @@ public class ViewFlow : IViewFlow
 		return back;
 	}
 
+	public IView CurrentView 
+	{
+		get 
+		{
+			return HasView() ? views.Peek() : ViewManager.EmptyView;
+		}
+	}
+
 	bool HasView()
 	{
 		return views.Count != 0;
