@@ -6,12 +6,22 @@ namespace Presenter
 	public class GameOverPresenter
 	{
 		IGameOverView view;
+		IGameFlow gameFlow;
 
 		public GameOverPresenter (Presenter.IGameOverView view)
 		{
 			this.view = view;
 			Init();
 		}	
+
+		public IGameFlow GameFlow {
+			get {
+				return gameFlow;
+			}
+			set {
+				gameFlow = value;
+			}
+		}
 
 		void Init()
 		{
@@ -21,12 +31,12 @@ namespace Presenter
 
 		void HandleOnReStartGameClick (object sender, System.EventArgs e)
 		{
-			
+			GameFlow.Restart();
 		}
 
 		void HandleOnExitClick (object sender, System.EventArgs e)
 		{
-			Application.Quit();
+			GameFlow.Stop();
 		}
 	}
 }

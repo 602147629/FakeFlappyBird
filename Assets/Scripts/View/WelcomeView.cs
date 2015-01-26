@@ -8,6 +8,7 @@ namespace View
 	public class WelcomeView : MonoView, IWelcomeView {
 
 		public Button startGameBtn;
+		WelcomePresenter welcomePresenter;
 
 		void Awake()
 		{
@@ -17,7 +18,8 @@ namespace View
 					OnStartGameClick(this, EventArgs.Empty);
 			});
 
-			new WelcomePresenter(this);
+			welcomePresenter = new WelcomePresenter(this);
+			welcomePresenter.GameFlow = new GameFlowController();
 		}
 
 		public event System.EventHandler OnStartGameClick;

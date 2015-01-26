@@ -9,6 +9,11 @@ public interface IGameFlow
 	void Start();
 
 	/// <summary>
+	/// Restart Game.
+	/// </summary>
+	void Restart();
+
+	/// <summary>
 	/// Pause Game.
 	/// </summary>
 	void Pause();

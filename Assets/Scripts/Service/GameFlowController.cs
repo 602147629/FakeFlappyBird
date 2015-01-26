@@ -7,6 +7,11 @@ public class GameFlowController : IGameFlow
 		Application.LoadLevel(LevelConfig.LEVEL);
 	}
 
+	public void Restart()
+	{
+
+	}
+
 	public void Pause()
 	{
 		Time.timeScale = 0;

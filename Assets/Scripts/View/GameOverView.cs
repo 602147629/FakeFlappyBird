@@ -10,12 +10,15 @@ namespace View
 		public Button restartBtn;
 		public Button exitBtn;
 
+		GameOverPresenter gameOverPresnter;
+
 		void Awake()
 		{
 			RegBtnEvent(restartBtn, OnReStartGameClick);
 			RegBtnEvent(exitBtn, OnExitClick);
 
-			new GameOverPresenter(this);
+			gameOverPresnter = new GameOverPresenter(this);
+			gameOverPresnter.GameFlow = new GameFlowController();
 		}
 
 		void RegBtnEvent(Button btn, EventHandler eventHandler)
