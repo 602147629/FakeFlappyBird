@@ -13,7 +13,10 @@ public class ViewManager : IViewManager
 	public IView GetView(string viewName)
 	{
 		IView view = EmptyView;
-		viewDic.TryGetValue(viewName, out view);
+		if (viewDic.ContainsKey(viewName))
+		{
+			view = viewDic[viewName];
+		}
 		return view;
 	}
 
@@ -22,15 +25,23 @@ public class ViewManager : IViewManager
 		return GetView(viewName) as TView;
 	}	
 
-	public IView CreateView(string viewName)
+	public IView CreateView(object viewResource)
 	{
 		IView view = EmptyView;
-		Object res = Resources.Load("View/" + viewName);
-		if (res != null && !viewDic.ContainsKey(viewName))
+		UnityEngine.Object res = viewResource as UnityEngine.Object;
+		if (res != null)
 		{
-			view = (GameObject.Instantiate(res) as GameObject).GetComponent<MonoView>();
-			viewDic.Add(viewName, view);
-			view.ViewName = viewName;
+			var resName = res.name;
+			var gameObject = GameObject.Instantiate (res) as GameObject;
+			if (gameObject != null)
+			{
+				view = gameObject.GetComponent<MonoView>();
+				if (view != null)
+				{
+					viewDic.Add (resName, view);
+					view.ViewName = resName;
+				}
+			}
 		}
 		else
 		{
@@ -39,9 +50,9 @@ public class ViewManager : IViewManager
 		return view;
 	}
 
-	public TView CreateView<TView>(string viewName) where TView : class, IView
+	public TView CreateView<TView>(object viewResource) where TView : class, IView
 	{
-		return CreateView(viewName) as TView;
+		return CreateView(viewResource) as TView;
 	}
 
 	IDictionary<string, IView> viewDic;

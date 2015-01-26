@@ -8,23 +8,26 @@ public class ViewInitializer : MonoBehaviour
 {
 	public GameObject uiRoot;
 
-	ViewManager viewMgr;
+	IViewManager viewMgr;
+	IViewFlow viewFlow;
 
 	void Awake()
 	{
 		viewMgr = new ViewManager();
 		
-		MonoView[] views = Resources.FindObjectsOfTypeAll<MonoView>();
-		foreach (MonoView view in views)
+		Object[] views = Resources.LoadAll("View");
+		foreach (Object view in views)
 		{
-			MonoView monoView= viewMgr.CreateView(view.name) as MonoView;
+			MonoView monoView= viewMgr.CreateView<MonoView>(view);
 			AddToUIRoot(monoView.gameObject);
 		}
+
+		viewFlow = new ViewFlow(viewMgr);
+		viewFlow.Forward("WelcomePanel");
 	}
 
 	void AddToUIRoot(GameObject view)
 	{
 		ComponentTool.AddChild(uiRoot, view);
 	}
-
 }

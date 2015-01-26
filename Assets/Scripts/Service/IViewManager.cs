@@ -24,16 +24,16 @@ public interface IViewManager
 	/// Creates the view.
 	/// </summary>
 	/// <returns>The view.</returns>
-	/// <param name="viewName">View name.</param>
-	IView CreateView(string viewName);
+	/// <param name="viewResource">View Resource.</param>
+	IView CreateView(object viewResource);
 
 	/// <summary>
 	/// Creates the view. Generic type.
 	/// </summary>
 	/// <returns>The view.</returns>
-	/// <param name="viewName">View name.</param>
+	/// <param name="viewResource">View Resource.</param>
 	/// <typeparam name="TView">The 1st type parameter.</typeparam>
-	TView CreateView<TView>(string viewName) where TView : class, IView;
+	TView CreateView<TView>(object viewResource) where TView : class, IView;
 }
 
 

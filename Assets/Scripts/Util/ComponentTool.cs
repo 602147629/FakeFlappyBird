@@ -7,11 +7,24 @@ public class ComponentTool
 		if (!parent || !child) return;
 
 		var transform = child.transform;
-		transform.parent = parent.transform;
-		transform.localPosition = Vector3.zero;
-		transform.localRotation = Quaternion.identity;
-		transform.localScale = Vector3.zero;
+
+		transform.SetParent(parent.transform, false);
 	}
 }
 
 
+public class P : MonoBehaviour
+{
+	[SerializeField]
+	protected int a;
+
+	public int A
+	{
+		get { return a; }
+	}
+}
+
+public class C : P
+{
+
+}
