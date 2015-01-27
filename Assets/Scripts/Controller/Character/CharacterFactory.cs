@@ -13,7 +13,10 @@ namespace CX.U3D.Character
 		{
 			Object res = Resources.Load(name);
 			GameObject ins = GameObject.Instantiate(res) as GameObject;
-			return ins.GetComponent<U3DCharacter>();
+
+			CharacterView cv = ins.AddComponent<CharacterView>();
+			return new U3DCharacter(cv);
+
 		}
 	}
 }

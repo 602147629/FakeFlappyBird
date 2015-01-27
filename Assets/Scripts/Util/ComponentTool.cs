@@ -10,21 +10,14 @@ public class ComponentTool
 
 		transform.SetParent(parent.transform, false);
 	}
-}
 
-
-public class P : MonoBehaviour
-{
-	[SerializeField]
-	protected int a;
-
-	public int A
+	public static void Destroy(GameObject toDestroy)
 	{
-		get { return a; }
+		#if UNITY_EDITOR
+		GameObject.DestroyImmediate(toDestroy);
+		#else
+		GameObject.Destroy(toDestroy);
+		#endif
 	}
-}
-
-public class C : P
-{
 
 }

@@ -31,6 +31,6 @@ public class CharacterTest
 	[TearDown]
 	public void TearDown()
 	{
-		character.Destroy();
+		character.View.Destroy();
 	}
 }

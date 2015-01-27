@@ -4,20 +4,20 @@ using CX.Character;
 
 namespace CX.U3D.Character
 {
-	public class U3DCharacter : MonoBehaviour, ICharacter
+	public class U3DCharacter : ICharacter
 	{
+		public U3DCharacter(IGameObjectView view)
+		{
+			this.View = view;
+		}
 
 		public ICharacterLifeCyle Life {
 			get;set;
 		}
 
-		public void Destroy ()
+		public IGameObjectView View
 		{
-#if UNITY_EDITOR
-			DestroyImmediate(gameObject);
-#else
-			Destroy(gameObject);
-#endif
+			get;set;
 		}
 	}
 }

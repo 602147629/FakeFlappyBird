@@ -11,7 +11,7 @@ namespace CX.Character
 		/// <value>The life.</value>
 		ICharacterLifeCyle Life { get; set; }
 
-		void Destroy();
+		IGameObjectView View { get; set; }
 	}
 }
 
