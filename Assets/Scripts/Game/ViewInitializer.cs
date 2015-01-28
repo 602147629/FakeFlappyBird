@@ -1,33 +1,51 @@
 using UnityEngine;
 
-/// <summary>
-/// View initializer.
-/// Use to create views.
-/// </summary>
-public class ViewInitializer : MonoBehaviour
+namespace Game
 {
-	public GameObject uiRoot;
-
-	IViewManager viewMgr;
-	IViewFlow viewFlow;
-
-	void Awake()
+	/// <summary>
+	/// View initializer.
+	/// Use to create views.
+	/// </summary>
+	public class ViewInitializer
 	{
-		viewMgr = new ViewManager();
+		GameObject uiRoot;
 		
-		Object[] views = Resources.LoadAll("View");
-		foreach (Object view in views)
+		IViewManager viewMgr;
+        
+		IViewFlow viewFlow;
+
+		public IViewFlow ViewFlow
+        {
+            get
+            {
+                return viewFlow;
+            }
+        }
+
+		public ViewInitializer()
 		{
-			MonoView monoView= viewMgr.CreateView<MonoView>(view);
-			AddToUIRoot(monoView.gameObject);
+			
 		}
-
-		viewFlow = new ViewFlow(viewMgr);
-		viewFlow.Forward("WelcomePanel");
-	}
-
-	void AddToUIRoot(GameObject view)
-	{
-		ComponentTool.AddChild(uiRoot, view);
+		
+		public void InitView()
+		{
+			uiRoot = GameObject.FindGameObjectWithTag("UIROOT");
+			viewMgr = new ViewManager();
+			
+			Object[] views = Resources.LoadAll("View");
+			foreach (Object view in views)
+			{
+				MonoView monoView= viewMgr.CreateView<MonoView>(view);
+				AddToUIRoot(monoView.gameObject);
+			}
+			
+			viewFlow = new ViewFlow(viewMgr);
+			viewFlow.Forward("WelcomePanel");
+		}
+		
+		void AddToUIRoot(GameObject view)
+		{
+			ComponentTool.AddChild(uiRoot, view);
+		}
 	}
 }

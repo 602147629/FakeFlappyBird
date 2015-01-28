@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="Temp/bin/Debug/Assembly-CSharp-Editor.dll" total="0" failures="0" not-run="0" date="2015-01-28" time="20:25:09">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.1433" os-version="Unix 14.0.0.0" platform="Unix" cwd="/Users/weidong_mobile/Project/TestUnity" machine-name="weidongtekiMac-mini.local" user="weidong_mobile" user-domain="weidongtekiMac-mini.local" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="Temp/bin/Debug/Assembly-CSharp-Editor.dll" success="True" time="0.011" asserts="0">
+    <results>
+      <test-suite name="UnityUnitTest" success="True" time="0.000" asserts="0">
+        <results />
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
