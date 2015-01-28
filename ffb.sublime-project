@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+    		"follow_symlinks": true,
+			"path": "/Users/weidong_mobile/Project/TestUnity/Assets",
+			"file_exclude_patterns":
+			[
+				"*.dll",
+				"*.meta"
+			]
+		}
+	],
+
+	"settings":
+    {
+        
+    },
+
+	"solution_file": "./TestUnity.sln"
+}
