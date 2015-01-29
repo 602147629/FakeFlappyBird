@@ -1,7 +1,7 @@
 using CX.Character;
 namespace CX.Character
 {
-	public interface IGameObjectView : IView
+	public interface IGameObjectView
 	{
 		void Destroy();
 	}

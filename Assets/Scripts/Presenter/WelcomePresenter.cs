@@ -1,14 +1,13 @@
-﻿using Presenter;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Presenter
+namespace Game.View
 {
 	public class WelcomePresenter
 	{
 		IWelcomeView view;
 		IGameFlow gameFlow;
 
-		public WelcomePresenter (Presenter.IWelcomeView view)
+		public WelcomePresenter (IWelcomeView view)
 		{
 			this.view = view;
 			Init();

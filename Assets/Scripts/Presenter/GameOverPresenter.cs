@@ -1,14 +1,12 @@
-﻿using Presenter;
-using UnityEngine;
-
-namespace Presenter
+﻿using UnityEngine;
+namespace Game.View
 {
 	public class GameOverPresenter
 	{
 		IGameOverView view;
 		IGameFlow gameFlow;
 
-		public GameOverPresenter (Presenter.IGameOverView view)
+		public GameOverPresenter (IGameOverView view)
 		{
 			this.view = view;
 			Init();

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Presenter;
+using Game.View;
+using CX.U3D.MVP.View;
 using System;
 
 namespace View

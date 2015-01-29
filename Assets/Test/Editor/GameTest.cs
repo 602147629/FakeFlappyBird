@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Game;
 
+[TestFixture]
 public class GameTest
 {
 	[SetUp]

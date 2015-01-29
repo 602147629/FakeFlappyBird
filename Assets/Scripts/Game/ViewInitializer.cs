@@ -1,4 +1,6 @@
 using UnityEngine;
+using CX.MVP.View;
+using CX.U3D.MVP.View;
 
 namespace Game
 {
@@ -30,7 +32,7 @@ namespace Game
 		public void InitView()
 		{
 			uiRoot = GameObject.FindGameObjectWithTag("UIROOT");
-			viewMgr = new ViewManager();
+			viewMgr = new U3DViewManager();
 			
 			Object[] views = Resources.LoadAll("View");
 			foreach (Object view in views)

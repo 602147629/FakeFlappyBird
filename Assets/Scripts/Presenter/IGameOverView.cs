@@ -1,5 +1,5 @@
 using System;
-namespace Presenter
+namespace Game.View
 {
 	public interface IGameOverView
 	{
