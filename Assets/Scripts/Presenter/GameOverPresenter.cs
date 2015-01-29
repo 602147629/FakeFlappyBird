@@ -1,26 +1,10 @@
 ﻿using UnityEngine;
+using CX.MVP.Presenter;
+
 namespace Game.View
 {
-	public class GameOverPresenter
+	public class GameOverPresenter : NavPresenter<IGameOverView>
 	{
-		IGameOverView view;
-		IGameFlow gameFlow;
-
-		public GameOverPresenter (IGameOverView view)
-		{
-			this.view = view;
-			Init();
-		}	
-
-		public IGameFlow GameFlow {
-			get {
-				return gameFlow;
-			}
-			set {
-				gameFlow = value;
-			}
-		}
-
 		void Init()
 		{
 			view.OnReStartGameClick += HandleOnReStartGameClick;
@@ -29,12 +13,10 @@ namespace Game.View
 
 		void HandleOnReStartGameClick (object sender, System.EventArgs e)
 		{
-			GameFlow.Restart();
 		}
 
 		void HandleOnExitClick (object sender, System.EventArgs e)
 		{
-			GameFlow.Stop();
 		}
 	}
 }

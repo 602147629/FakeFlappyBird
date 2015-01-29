@@ -35,14 +35,14 @@ namespace Game
 			viewMgr = new U3DViewManager();
 			
 			Object[] views = Resources.LoadAll("View");
-			foreach (Object view in views)
+			foreach (var view in views)
 			{
-				MonoView monoView= viewMgr.CreateView<MonoView>(view);
+				U3DView monoView= viewMgr.CreateView<U3DView>(view);
 				AddToUIRoot(monoView.gameObject);
 			}
-			
-			viewFlow = new ViewFlow(viewMgr);
-			viewFlow.Forward("WelcomePanel");
+			viewFlow = (viewMgr as U3DViewManager).ViewFlow;
+
+			viewFlow.Forward("WelcomeView");
 		}
 		
 		void AddToUIRoot(GameObject view)

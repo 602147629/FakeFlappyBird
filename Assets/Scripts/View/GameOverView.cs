@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Game.View;
 using CX.U3D.MVP.View;
 using System;
 
-namespace View
+namespace Game.View
 {
-	public class GameOverView : MonoView, IGameOverView {
+	public class GameOverView : U3DView, IGameOverView {
 
 		public Button restartBtn;
 		public Button exitBtn;
@@ -17,9 +16,6 @@ namespace View
 		{
 			RegBtnEvent(restartBtn, OnReStartGameClick);
 			RegBtnEvent(exitBtn, OnExitClick);
-
-			gameOverPresnter = new GameOverPresenter(this);
-			gameOverPresnter.GameFlow = new GameFlowController();
 		}
 
 		void RegBtnEvent(Button btn, EventHandler eventHandler)
