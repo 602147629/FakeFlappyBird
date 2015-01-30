@@ -5,10 +5,18 @@ namespace Game.View
 {
 	public class WelcomeViewPresenter : NavPresenter<IWelcomeView>
 	{
+		private IGameFlow gameFlow;
+
+		public WelcomeViewPresenter()
+		{
+			gameFlow = new GameFlowController();
+		}
+
 		protected override void InitializeView ()
 		{
 			view.OnStartGameEvent.AddListener(delegate {
-				NavTo("GameOverView");				
+				NavTo("InGameView");
+				gameFlow.Start();
 			});
 		}
 	}

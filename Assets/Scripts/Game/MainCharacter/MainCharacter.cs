@@ -1,15 +1,25 @@
-using UnityEngine;
-using CX.U3D.Character;
+using CX.Character;
 
-public class MainCharacter : CharacterView
+namespace Game.Character
 {
-	void OnTriggerEnter(Collider other) 
+	public class MainCharacter : CharacterBase
 	{
-		if (other.tag == "Blocker")
+		public MainCharacter (ICharacterView view) : base (view)
 		{
+		}
 
+
+
+
+		public class MainCharacterLife : ICharacterLifeCyle
+		{
+			IGameFlow gameFlow = new GameFlowController();
+
+			public void Dead()
+			{
+				gameFlow.Stop();
+			}
 		}
 	}
 }
-
 

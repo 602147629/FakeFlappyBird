@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Character
+namespace Game.Character
 {
 	public class CharacterMotor : MonoBehaviour {
 		

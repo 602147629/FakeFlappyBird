@@ -5,34 +5,27 @@ using CX.U3D.MVP.View;
 namespace Game
 {
 	/// <summary>
-	/// View initializer.
+	/// View Loader
 	/// Use to create views.
 	/// </summary>
-	public class ViewInitializer
+	public class ViewLoader
 	{
 		GameObject uiRoot;
+		Canvas uiCanvas;
 		
 		IViewManager viewMgr;
-        
-		IViewFlow viewFlow;
 
-		public IViewFlow ViewFlow
-        {
-            get
-            {
-                return viewFlow;
-            }
-        }
-
-		public ViewInitializer()
+		public ViewLoader(IViewManager viewMgr)
 		{
-			
+			this.viewMgr = viewMgr;
 		}
-		
-		public void InitView()
+
+
+		public void LoadView()
 		{
 			uiRoot = GameObject.FindGameObjectWithTag("UIROOT");
-			viewMgr = new U3DViewManager();
+			uiRoot.AddComponent<DontDestroy>();
+			uiCanvas = uiRoot.GetComponentInChildren<Canvas>();
 			
 			Object[] views = Resources.LoadAll("View");
 			foreach (var view in views)
@@ -40,14 +33,11 @@ namespace Game
 				U3DView monoView= viewMgr.CreateView<U3DView>(view);
 				AddToUIRoot(monoView.gameObject);
 			}
-			viewFlow = (viewMgr as U3DViewManager).ViewFlow;
-
-			viewFlow.Forward("WelcomeView");
 		}
 		
 		void AddToUIRoot(GameObject view)
 		{
-			ComponentTool.AddChild(uiRoot, view);
+			ComponentTool.AddChild(uiCanvas.gameObject, view);
 		}
 	}
 }

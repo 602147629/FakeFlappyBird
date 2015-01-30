@@ -1,4 +1,5 @@
 using UnityEngine;
+using Game;
 
 /// <summary>
 /// Game Initialize
@@ -7,7 +8,8 @@ public class Main : MonoBehaviour
 {
 	void Awake()
 	{
-		Debug.Log(typeof(Game.View.WelcomeViewPresenter));
-		Debug.Log(System.Type.GetType("Game.View.WelcomeViewPresenter"));
+		GameFacade facade = new GameFacade();
+		facade.StartGame();
+
 	}
 }

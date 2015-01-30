@@ -54,7 +54,7 @@ namespace CX.U3D.MVP.View
 				if (presType != null)
 				{
 					var pres = Activator.CreateInstance (presType) as IPresenter;
-					pres.View = view;
+					view.Presenter = pres;
 
 					if (pres is IViewNavable)
 					{
@@ -73,17 +73,18 @@ namespace CX.U3D.MVP.View
 		{
 			return CreateView(viewResource) as TView;
 		}
+
+		public IViewFlow ViewFlow 
+		{
+			get 
+			{
+				return viewFlow;
+			}
+		}
 		
 		IDictionary<string, IView> viewDic;
 		IDictionary<Type, IView> viewTypeDic;
 		IViewFlow viewFlow;
-		
-
-		public IViewFlow ViewFlow {
-			get {
-				return viewFlow;
-			}
-		}
 	}
 }
 

@@ -6,22 +6,18 @@ using CX.Character;
 using CX.U3D.Character;
 using CX.MVP.View;
 using CX.U3D.MVP.View;
+using Game.Character;
 
 public class CharacterTest
 {
 	ICharacter character;
-	IViewFlow viewFlow;
-	IViewManager viewMgr;
+
 	
 	[SetUp]
 	public void SetUp()
 	{
 		CharacterFactory cf = new CharacterFactory();
 		character = cf.Create("bird");
-		character.Life = new CharacterLife();
-
-		viewMgr = new U3DViewManager();
-		viewFlow = new ViewFlow(viewMgr);
 	}
 
 	[Test]

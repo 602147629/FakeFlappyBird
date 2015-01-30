@@ -1,9 +1,10 @@
 using UnityEngine;
 using CX.Character;
+using CX.Obj;
 
 namespace CX.U3D.Character
 {
-	public class CharacterView : MonoBehaviour, IGameObjectView
+	public class CharacterView : MonoBehaviour, ICharacterView
 	{
 		public void Destroy()
 		{
@@ -16,6 +17,16 @@ namespace CX.U3D.Character
 		}
 
 		public string ViewName
+		{
+			get;set;
+		}
+
+		public ICharacter Character
+		{
+			get;set;
+		}
+
+		IGameObject IGameObjectView.HostObject
 		{
 			get;set;
 		}

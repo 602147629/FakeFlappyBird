@@ -1,28 +1,10 @@
+using CX.MVP.Presenter;
+
 namespace CX.MVP.View
 {
-	public abstract class ViewManagerBase : IViewManager
+	public abstract class ViewManagerBase 
 	{
 		public static readonly IView EmptyView = new NullView();
-
-		public virtual IView GetView(string viewName)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public virtual TView GetView<TView>(string viewName) where TView : class, IView
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public virtual IView CreateView(object viewResource)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public virtual TView CreateView<TView>(object viewResource) where TView : class, IView
-		{
-			throw new System.NotImplementedException();
-		}
 
 		public class NullView : IView
 		{
@@ -38,6 +20,11 @@ namespace CX.MVP.View
 			public string ViewName
 			{
 				get; set;
+			}
+
+			public IPresenter Presenter
+			{
+				get;set;
 			}
 		}
 	}

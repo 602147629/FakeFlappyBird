@@ -34,6 +34,12 @@ namespace CX.MVP.View
 		/// <param name="viewResource">View Resource.</param>
 		/// <typeparam name="TView">The 1st type parameter.</typeparam>
 		TView CreateView<TView>(object viewResource) where TView : class, IView;
+
+		/// <summary>
+		/// Gets the view flow <see cref="IViewFlow"/>.
+		/// </summary>
+		/// <value>The view flow.</value>
+		IViewFlow ViewFlow { get; }
 	}
 }
 

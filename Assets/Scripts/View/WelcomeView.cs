@@ -14,8 +14,6 @@ namespace Game.View
 			startGameBtn.onClick = new Button.ButtonClickedEvent();
 		}
 
-		public event System.EventHandler OnStartGameClick;	
-
 		public Button.ButtonClickedEvent OnStartGameEvent
 		{
 			get

@@ -1,9 +1,11 @@
+using CX.Obj;
+
 namespace CX.Character
 {
 	/// <summary>
 	/// Character Interface.
 	/// </summary>
-	public interface ICharacter
+	public interface ICharacter : IGameObject
 	{
 		/// <summary>
 		/// ICharacterLifeCyle Property.
@@ -11,7 +13,7 @@ namespace CX.Character
 		/// <value>The life.</value>
 		ICharacterLifeCyle Life { get; set; }
 
-		IGameObjectView View { get; set; }
+		new ICharacterView View { get; set; }
 	}
 }
 

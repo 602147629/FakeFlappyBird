@@ -1,8 +1,8 @@
-using CX.Character;
-namespace CX.Character
+namespace CX.Obj
 {
 	public interface IGameObjectView
 	{
+		IGameObject HostObject { get; set; }
 		void Destroy();
 	}
 }

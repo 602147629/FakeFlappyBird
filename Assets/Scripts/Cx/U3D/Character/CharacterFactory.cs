@@ -1,4 +1,5 @@
 using CX.Character;
+using Game.Character;
 using UnityEngine;
 
 namespace CX.U3D.Character
@@ -15,7 +16,7 @@ namespace CX.U3D.Character
 			GameObject ins = GameObject.Instantiate(res) as GameObject;
 
 			CharacterView cv = ins.AddComponent<CharacterView>();
-			return new U3DCharacter(cv);
+			return new MainCharacter(cv);
 
 		}
 	}
