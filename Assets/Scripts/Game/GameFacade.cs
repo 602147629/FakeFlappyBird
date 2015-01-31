@@ -28,8 +28,7 @@ namespace Game
 
 		private void InitCharacter()
 		{
-			CharacterFactory characterFactory = new CharacterFactory();
-			ICharacter character = characterFactory.Create("bird");
+
 		}
 
 		private void InitView()

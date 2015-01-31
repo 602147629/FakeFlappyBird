@@ -6,23 +6,44 @@ namespace CX.Character
 {
 	public abstract class CharacterBase : ICharacter
 	{
-		public CharacterBase(ICharacterView view)
-		{
-			this.View = view;
-		}
+		private ICharacterView view;
+		private ICharacterLifeCyle life;
 
-		public virtual ICharacterLifeCyle Life {
-			get;set;
+		public virtual ICharacterLifeCyle Life 
+		{
+			get
+			{
+				return life;
+			}
+			set
+			{
+				life = value;
+			}
 		}
 
 		public virtual ICharacterView View
 		{
-			get;set;
+			get
+			{
+				return view;
+			}
+			set
+			{
+				view = value;
+				view.Character = this;
+			}
 		}
 
 		IGameObjectView IGameObject.View
 		{
-			get;set;
+			get
+			{
+				return View;
+			}
+			set
+			{
+				View = value as ICharacterView;
+			}
 		}
 	}
 }

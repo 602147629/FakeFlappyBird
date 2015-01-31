@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
+using Game;
+using CX.U3D.Character;
 
 public class GameFlowController : IGameFlow
 {
 	public void Start()
 	{
-		Application.LoadLevel(LevelConfig.LEVEL);
+		//Application.LoadLevel(LevelConfig.LEVEL);
+		LevelLoader.LoadLevel(LevelConfig.LEVEL, delegate() {
+			CharacterFactory.Create("bird");
+		});
 	}
 
 	public void Restart()

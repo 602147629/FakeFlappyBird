@@ -16,8 +16,7 @@ public class CharacterTest
 	[SetUp]
 	public void SetUp()
 	{
-		CharacterFactory cf = new CharacterFactory();
-		character = cf.Create("bird");
+
 	}
 
 	[Test]

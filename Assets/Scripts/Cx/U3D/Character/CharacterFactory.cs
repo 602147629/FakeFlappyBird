@@ -10,14 +10,17 @@ namespace CX.U3D.Character
 		{
 		}
 
-		public ICharacter Create(string name)
+		public static ICharacter Create(string name)
 		{
 			Object res = Resources.Load(name);
 			GameObject ins = GameObject.Instantiate(res) as GameObject;
 
-			CharacterView cv = ins.AddComponent<CharacterView>();
-			return new MainCharacter(cv);
+			CharacterView view = ins.GetComponent<CharacterView>();
+			ICharacter c =  new MainCharacter();
+			c.View = view;
+			c.Life = new MainCharacter.MainCharacterLife();
 
+			return c;
 		}
 	}
 }
