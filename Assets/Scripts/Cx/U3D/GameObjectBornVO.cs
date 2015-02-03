@@ -17,6 +17,8 @@ namespace CX.U3D
 
 		private int bornCount = 1;
 
+		private string objectType;
+
 		/// <summary>
 		/// Gets or sets the res path.
 		/// </summary>
@@ -66,6 +68,18 @@ namespace CX.U3D
 			get { return bornCount; }
 			set { bornCount = value; }
 		}
+
+		/// <summary>
+		/// Gets or sets the type of the object.
+		/// Determines to create which type of object.
+		/// </summary>
+		/// <value>The type of the object.</value>
+		public string ObjectType
+		{
+			get { return objectType; }
+			set { objectType = value; }
+		}
+
 	}
 }
 
