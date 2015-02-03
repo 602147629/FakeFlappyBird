@@ -15,6 +15,8 @@ namespace CX.U3D
 
 		private Quaternion rotation = Quaternion.identity;
 
+		private int bornCount = 1;
+
 		/// <summary>
 		/// Gets or sets the res path.
 		/// </summary>
@@ -53,6 +55,16 @@ namespace CX.U3D
 		{
 			get { return rotation; }
 			set { rotation = value; }
+		}
+
+		/// <summary>
+		/// Gets or sets the born count.
+		/// </summary>
+		/// <value>The born count.</value>
+		public int BornCount
+		{
+			get { return bornCount; }
+			set { bornCount = value; }
 		}
 	}
 }
