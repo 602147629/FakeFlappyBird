@@ -8,26 +8,30 @@ using CX.MVP.View;
 using CX.U3D.MVP.View;
 using Game.Character;
 
-public class CharacterTest
+namespace GameTest
 {
-	ICharacter character;
-
-	
-	[SetUp]
-	public void SetUp()
+	public class CharacterTest
 	{
-
+		ICharacter character;
+		
+		
+		[SetUp]
+		public void SetUp()
+		{
+			
+		}
+		
+		[Test]
+		public void TestDead()
+		{
+			character.Life.Dead();
+		}
+		
+		[TearDown]
+		public void TearDown()
+		{
+			character.View.Destroy();
+		}
 	}
 
-	[Test]
-	public void TestDead()
-	{
-		character.Life.Dead();
-	}
-
-	[TearDown]
-	public void TearDown()
-	{
-		character.View.Destroy();
-	}
 }
