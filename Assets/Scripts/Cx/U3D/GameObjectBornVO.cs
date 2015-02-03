@@ -1,11 +1,12 @@
 using UnityEngine;
+using CX.Obj;
 
 namespace CX.U3D
 {
 	/// <summary>
 	/// Use to create a GameObject
 	/// </summary>
-	public class GameObjectBornVO
+	public class GameObjectBornVO : BornVO
 	{
 		private string resPath;
 
@@ -14,10 +15,6 @@ namespace CX.U3D
 		private Vector3 scale = Vector3.one;
 
 		private Quaternion rotation = Quaternion.identity;
-
-		private int bornCount = 1;
-
-		private string objectType;
 
 		/// <summary>
 		/// Gets or sets the res path.
@@ -57,27 +54,6 @@ namespace CX.U3D
 		{
 			get { return rotation; }
 			set { rotation = value; }
-		}
-
-		/// <summary>
-		/// Gets or sets the born count.
-		/// </summary>
-		/// <value>The born count.</value>
-		public int BornCount
-		{
-			get { return bornCount; }
-			set { bornCount = value; }
-		}
-
-		/// <summary>
-		/// Gets or sets the type of the object.
-		/// Determines to create which type of object.
-		/// </summary>
-		/// <value>The type of the object.</value>
-		public string ObjectType
-		{
-			get { return objectType; }
-			set { objectType = value; }
 		}
 
 	}

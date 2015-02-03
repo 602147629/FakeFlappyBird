@@ -4,6 +4,7 @@ using CX.Obj;
 using CX.Character;
 using CX.U3D.Character;
 using Game;
+using UnityEngine;
 
 namespace GameTest
 {
@@ -24,9 +25,12 @@ namespace GameTest
 		[Test]
 		public void PushToPool()
 		{
-			cf.AddToPool(new MainCharacterBornVO());
+			var upBlockBornVO = new UpBlockBornVO ();
+			cf.AddToPool (upBlockBornVO);
 
-			var get = objectPool.GetOne(typeof(Game.Character.MainCharacter));
+			var count = GameObject.FindObjectsOfType(typeof(CX.U3D.U3DGameObjectView)).Length;
+			Assert.AreEqual(upBlockBornVO.BornCount, count);
+
 
 		}
 	}

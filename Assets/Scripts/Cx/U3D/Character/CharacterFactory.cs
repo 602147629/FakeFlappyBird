@@ -24,25 +24,7 @@ namespace CX.U3D.Character
 
 		public void AddToPool(GameObjectBornVO bornVO)
 		{
-			UnityEngine.Object res = Resources.Load(bornVO.ResPath);
-
-			for (int i = 0; i < bornVO.BornCount; i++)
-			{
-				GameObject ins = GameObject.Instantiate(res) as GameObject;
-				ins.transform.position = bornVO.Position;
-				ins.transform.localScale = bornVO.Scale;
-				ins.transform.rotation = bornVO.Rotation;
-				
-				ins.SetActive(false);
-				
-				IGameObjectView view = ins.GetComponent<U3DGameObjectView>() as IGameObjectView;
-				IGameObject go = CreateHelper.Create<IGameObject>(bornVO.ObjectType);
-
-				view.HostObject = go;
-				go.View = view;
-
-				objectPool.PutBack(go);
-			}
+			objectPool.RegCreater(new U3DPooledObjectCreater(bornVO));
 		}
 	}
 }

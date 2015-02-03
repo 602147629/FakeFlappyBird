@@ -9,18 +9,26 @@ namespace CX.Obj
 
 		public ObjectPool()
 		{
-			pools = new Dictionary<Type, Stack<IGameObject>>();
+			pools = new Dictionary<Type, PooledObjectCreater>();
+		}
+
+		public void RegCreater (PooledObjectCreater creater)
+		{
+			if (creater.CreateType != null)
+			{
+				creater.StartGenerate();
+				pools.Add(creater.CreateType, creater);
+			}
 		}
 
 		public IGameObject GetOne(Type type)
 		{
 			IGameObject obj = empty;
 
-			Stack<IGameObject> objStack = null;
-			if (pools.TryGetValue(type, out objStack))
+			PooledObjectCreater objCreater = null;
+			if (pools.TryGetValue(type, out objCreater))
 			{
-				if (objStack.Count > 0)
-					obj = objStack.Pop();
+				obj = objCreater.Pop();
 			}
 			return obj;
 		}
@@ -29,17 +37,14 @@ namespace CX.Obj
 		{
 			Type type = gameObject.GetType();
 
-			Stack<IGameObject> objStack = null;
-			if (!pools.TryGetValue(type, out objStack))
+			PooledObjectCreater objCreater = null;
+			if (pools.TryGetValue(type, out objCreater))
 			{
-				objStack = new Stack<IGameObject>();
-				pools.Add(type, objStack);
-			}
-			objStack.Push(gameObject);
-			
+				objCreater.Push(gameObject);
+			}			
 		}
 
-		IDictionary<Type, Stack<IGameObject>> pools;
+		IDictionary<Type, PooledObjectCreater> pools;
 
 		public class EmptyObject : IGameObject
 		{

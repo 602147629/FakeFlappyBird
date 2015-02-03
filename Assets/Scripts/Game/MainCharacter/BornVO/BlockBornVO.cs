@@ -9,6 +9,7 @@ namespace Game
 		{
 			Scale = new Vector3(1, Random.Range(1, 4), 1);		
 			BornCount = 20;
+			ObjectType = "Game.Character.MainCharacter";
 		}
 	}
 

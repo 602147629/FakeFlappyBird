@@ -7,6 +7,7 @@ namespace Game
 		public MainCharacterBornVO ()
 		{
 			ResPath = "Bird";
+			ObjectType = "Game.Character.MainCharacter";
 		}
 	}
 }
