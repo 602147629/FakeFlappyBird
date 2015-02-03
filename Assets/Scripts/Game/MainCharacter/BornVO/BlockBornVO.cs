@@ -7,7 +7,8 @@ namespace Game
 	{
 		protected BlockBornVO()
 		{
-			Scale = new Vector3(1, Random.Range(1, 4), 1);			
+			Scale = new Vector3(1, Random.Range(1, 4), 1);		
+			BornCount = 20;
 		}
 	}
 
