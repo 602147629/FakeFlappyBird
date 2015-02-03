@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using CX.U3D.MVP.View;
 using System;
@@ -10,7 +10,7 @@ namespace Game.View
 		public Button restartBtn;
 		public Button exitBtn;
 
-		GameOverPresenter gameOverPresnter;
+		GameOverViewPresenter gameOverPresnter;
 
 		void Awake()
 		{

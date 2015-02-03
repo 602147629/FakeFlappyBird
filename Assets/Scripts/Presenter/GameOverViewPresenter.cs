@@ -3,7 +3,7 @@ using CX.MVP.Presenter;
 
 namespace Game.View
 {
-	public class GameOverPresenter : NavPresenter<IGameOverView>
+	public class GameOverViewPresenter : NavPresenter<IGameOverView>
 	{
 		void Init()
 		{

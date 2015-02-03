@@ -9,11 +9,11 @@ namespace Game
     {
         private ViewLoader viewLoader;
 
-		private IGameFlow gameFlow;
+		public static IGameFlow GameFlow;
+
+		public static IViewFlow ViewFlow;
 
 		private IViewManager viewMgr;
-
-		private IViewFlow viewFlow;
 
         public GameFacade()
         {
@@ -23,7 +23,7 @@ namespace Game
 
 		private void InitGame()
 		{
-			gameFlow = new GameFlowController ();
+			GameFlow = new GameFlowController ();
 		}
 
 		private void InitCharacter()
@@ -35,13 +35,13 @@ namespace Game
 		{
 			viewMgr = new U3DViewManager ();
 			viewLoader = new ViewLoader(viewMgr);
-			viewFlow = viewMgr.ViewFlow;
+			ViewFlow = viewMgr.ViewFlow;
 		}
 
         public void StartGame()
         {
             viewLoader.LoadView();		
-			viewFlow.Forward("WelcomeView");
+			ViewFlow.Forward("WelcomeView");
         }
 				
     }

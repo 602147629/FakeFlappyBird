@@ -1,4 +1,5 @@
 using CX.Character;
+using Game;
 
 namespace Game.Character
 {
@@ -6,6 +7,7 @@ namespace Game.Character
 	{
 		public MainCharacter ()
 		{
+			Life = new MainCharacterLife();
 		}
 
 
@@ -15,6 +17,7 @@ namespace Game.Character
 		{
 			public void Dead()
 			{
+				GameFacade.ViewFlow.Forward("GameOverView");
 
 			}
 		}

@@ -2,8 +2,8 @@
 
 namespace Game.Character
 {
-	public class CharacterMotor : MonoBehaviour {
-		
+	public class CharacterMotor : MonoBehaviour
+	{		
 		public CharacterController character;
 		public float forwardSpeed = 5;
 		public float downSpeed = 5;
