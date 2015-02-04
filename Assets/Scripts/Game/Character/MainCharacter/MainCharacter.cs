@@ -10,9 +10,6 @@ namespace Game.Character
 			Life = new MainCharacterLife();
 		}
 
-
-
-
 		public class MainCharacterLife : ICharacterLifeCyle
 		{
 			public void Dead()
