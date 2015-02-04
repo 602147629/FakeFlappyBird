@@ -38,8 +38,10 @@ namespace GameTest
 		public void PushToPool()
 		{
 			var get = GetOne (typeof(MainCharacterBornVO));
+			Assert.AreNotEqual(get, ObjectPool.empty);
 			var get2 = GetOne(typeof(MainCharacterBornVO));
-
+			Assert.AreNotEqual(get2, ObjectPool.empty);
+			
 			Assert.AreEqual(get.GetType(), get2.GetType());
 		}
 
@@ -47,6 +49,7 @@ namespace GameTest
 		public void PushActive()
 		{
 			var get = GetOne(typeof(MainCharacterBornVO));
+			Assert.AreNotEqual(get, ObjectPool.empty);
 			Assert.AreEqual(get.View.IsActive, true);
 		}
 
