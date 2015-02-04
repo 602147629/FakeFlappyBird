@@ -5,7 +5,6 @@ using CX.Obj;
 
 public class GameFlowController : IGameFlow
 {
-	CharacterFactory characterFactory = new CharacterFactory();
 	IObjectPool objectPool = new ObjectPool();
 
 	public void Start()

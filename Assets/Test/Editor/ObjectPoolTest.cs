@@ -4,6 +4,7 @@ using CX.Obj;
 using CX.Character;
 using CX.U3D.Character;
 using Game;
+using CX.U3D;
 using UnityEngine;
 
 namespace GameTest
@@ -13,16 +14,14 @@ namespace GameTest
 	public class ObjectPoolTest
 	{		
 		IObjectPool objectPool;
-		CharacterFactory cf;
 
 		[SetUp]
 		public void SetUp()
 		{
-			cf = new CharacterFactory();
-			objectPool = cf.ObjectPool;
+			objectPool = new ObjectPool();
 
 			var upBlockBornVO = new UpBlockBornVO ();
-			cf.AddToPool (upBlockBornVO);
+			objectPool.RegCreater(new U3DPooledObjectCreater(upBlockBornVO));
 		}
 
 		IGameObject GetOne ()
