@@ -17,6 +17,19 @@ namespace CX.U3D
 			get { return hostObject; }
 			set { hostObject = value; }
 		}
+
+		public void Active(bool isActive)
+		{
+			gameObject.SetActive(isActive);
+		}
+
+		public bool IsActive
+		{
+			get
+			{
+				return gameObject.activeSelf;
+			}
+		}
 	}
 }
 

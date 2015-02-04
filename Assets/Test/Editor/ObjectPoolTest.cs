@@ -20,18 +20,31 @@ namespace GameTest
 		{
 			cf = new CharacterFactory();
 			objectPool = cf.ObjectPool;
+
+			var upBlockBornVO = new UpBlockBornVO ();
+			cf.AddToPool (upBlockBornVO);
+		}
+
+		IGameObject GetOne ()
+		{
+			var get = objectPool.GetOne (typeof(Game.Character.MainCharacter));
+			return get;
 		}
 
 		[Test]
 		public void PushToPool()
 		{
-			var upBlockBornVO = new UpBlockBornVO ();
-			cf.AddToPool (upBlockBornVO);
+			var get = GetOne ();
+			var get2 = GetOne();
 
-			var count = GameObject.FindObjectsOfType(typeof(CX.U3D.U3DGameObjectView)).Length;
-			Assert.AreEqual(upBlockBornVO.BornCount, count);
+			Assert.AreEqual(get.GetType(), get2.GetType());
+		}
 
-
+		[Test]
+		public void PushActive()
+		{
+			var get = GetOne();
+			Assert.AreEqual(get.View.IsActive, true);
 		}
 	}
 }

@@ -19,17 +19,23 @@ namespace CX.U3D
 			GameObject ins = GameObject.Instantiate(res) as GameObject;
 			ins.transform.position = bornVO.Position;
 			ins.transform.localScale = bornVO.Scale;
-			ins.transform.rotation = bornVO.Rotation;
-			
-			ins.SetActive(false);
+			ins.transform.rotation = bornVO.Rotation;			
 			
 			IGameObjectView view = ins.GetComponent<U3DGameObjectView>() as IGameObjectView;
 			IGameObject go = CreateHelper.Create<IGameObject>(bornVO.ObjectType);
-			
+
+			view.Active(false);
 			view.HostObject = go;
 			go.View = view;
 
 			return go;
+		}
+
+		public override IGameObject Pop()
+		{
+			IGameObject obj =  base.Pop();
+			obj.View.Active(true);
+			return obj;
 		}
 	}
 }
