@@ -6,11 +6,6 @@ namespace CX.U3D.Character
 {
 	public class CharacterView : U3DGameObjectView, ICharacterView
 	{
-		public void Destroy()
-		{
-			ComponentTool.Destroy(gameObject);
-		}
-
 		public ICharacter Character {
 			get 
 			{
