@@ -9,24 +9,20 @@ namespace GameTest
 	[TestFixture]
 	public class GameFlowTest
 	{
+		IGameFlow gameFLow;
+
 		[SetUp]
 		public void SetUp()
 		{
+			gameFLow = new GameFlowController();
 			
-		}
-		
-		[Test]
-		public void JustTest()
-		{
-			
-			
-		}
+		}	
+
 		
 		[Test]
 		public void Start()
 		{
-			var gs = new GameFacade();
-			gs.StartGame();			
+			gameFLow.Start();
 			
 		}
 		

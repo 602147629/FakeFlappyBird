@@ -30,7 +30,7 @@ namespace CX.U3D
 		/// Gets or sets the position.
 		/// </summary>
 		/// <value>The position.</value>
-		public Vector3 Position
+		public virtual Vector3 Position
 		{
 			get { return position; }
 			set { position = value; }
@@ -40,7 +40,7 @@ namespace CX.U3D
 		/// Gets or sets the scale.
 		/// </summary>
 		/// <value>The scale.</value>
-		public Vector3 Scale
+		public virtual Vector3 Scale
 		{
 			get { return scale; }
 			set { scale = value; }
@@ -50,7 +50,7 @@ namespace CX.U3D
 		/// Gets or sets the rotation.
 		/// </summary>
 		/// <value>The rotation.</value>
-		public Quaternion Rotation
+		public virtual Quaternion Rotation
 		{
 			get { return rotation; }
 			set { rotation = value; }

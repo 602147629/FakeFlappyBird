@@ -36,13 +36,13 @@ namespace CX.Obj
 
 		public void PutBack(IGameObject gameObject)
 		{
-			Type type = gameObject.GetType();
+			Type createType = gameObject.CreateVOType;
 
 			PooledObjectCreater objCreater = null;
-			if (pools.TryGetValue(type, out objCreater))
+			if (createType != null && pools.TryGetValue(createType, out objCreater))
 			{
 				objCreater.Push(gameObject);
-			}			
+			}	
 		}
 
 		public void ClearAllInPool()
@@ -66,6 +66,11 @@ namespace CX.Obj
 			public override string ToString ()
 			{
 				return string.Format ("[EmptyObject: ]");
+			}
+
+			public Type CreateVOType
+			{
+				get; set;
 			}
 			
 		}

@@ -2,6 +2,7 @@ using CX.MVP.View;
 using CX.U3D.MVP.View;
 using CX.U3D.Character;
 using CX.Character;
+using CX.Obj;
 
 namespace Game
 {
@@ -13,22 +14,20 @@ namespace Game
 
 		public static IViewFlow ViewFlow;
 
+		public static IObjectPool ObjectPool;
+
 		private IViewManager viewMgr;
 
         public GameFacade()
         {
 			InitGame();
 			InitView();
+			ObjectPool = new ObjectPool();
         }
 
 		private void InitGame()
 		{
 			GameFlow = new GameFlowController ();
-		}
-
-		private void InitCharacter()
-		{
-
 		}
 
 		private void InitView()

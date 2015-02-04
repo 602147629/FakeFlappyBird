@@ -3,7 +3,7 @@ namespace CX.Obj
 	/// <summary>
 	/// All gameobjects in game must implement this interface.
 	/// </summary>
-	public interface IGameObject
+	public interface IGameObject : IPooledObject
 	{
 		/// <summary>
 		/// Gets or sets the view <see cref="CX.Obj.IGameObjectView"/>.

@@ -28,7 +28,6 @@ namespace CX.U3D
 			IGameObjectView view = ins.GetComponent<U3DGameObjectView>() as IGameObjectView;
 			IGameObject go = CreateHelper.Create<IGameObject>(bornVO.ObjectType);
 			
-			view.Active(false);
 			view.HostObject = go;
 			go.View = view;
 			

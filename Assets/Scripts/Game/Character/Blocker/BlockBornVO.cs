@@ -3,14 +3,25 @@ using UnityEngine;
 
 namespace Game
 {
-	public abstract class BlockBornVO : GameObjectBornVO
+	public class BlockBornVO : GameObjectBornVO
 	{
 		protected BlockBornVO()
 		{
-			Scale = new Vector3(1, Random.Range(1, 4), 1);		
 			BornCount = 20;
 			ObjectType = "Game.Character.BlockerCharacter";
 		}
+
+		public override Vector3 Scale 
+		{
+			get 
+			{
+				return new Vector3(base.Scale.x, Random.Range(1, 4) * base.Scale.y, base.Scale.z);
+			}
+			set {
+				base.Scale = value;
+			}
+		}
+
 	}
 
 	public class UpBlockBornVO : BlockBornVO

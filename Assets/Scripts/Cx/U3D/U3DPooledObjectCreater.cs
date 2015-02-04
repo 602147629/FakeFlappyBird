@@ -14,7 +14,9 @@ namespace CX.U3D
 
 		protected override IGameObject GenerateOne ()
 		{
-			return creater.Create(bornVO);
+			IGameObject gameObejct =  creater.Create(bornVO);
+			gameObejct.View.Active(false);
+			return gameObejct;
 		}
 
 		public override IGameObject Pop()
@@ -22,6 +24,12 @@ namespace CX.U3D
 			IGameObject obj =  base.Pop();
 			obj.View.Active(true);
 			return obj;
+		}
+
+		public override void Push (IGameObject obj)
+		{
+			obj.View.Active(false);
+			base.Push (obj);
 		}
 	}
 }

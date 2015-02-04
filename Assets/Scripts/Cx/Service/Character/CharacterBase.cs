@@ -8,6 +8,7 @@ namespace CX.Character
 	{
 		private ICharacterView view;
 		private ICharacterLifeCyle life;
+		private Type createVOType;
 
 		public virtual ICharacterLifeCyle Life 
 		{
@@ -43,6 +44,18 @@ namespace CX.Character
 			set
 			{
 				View = value as ICharacterView;
+			}
+		}
+
+		public Type CreateVOType
+		{
+			get
+			{
+				return createVOType;
+			}
+			set
+			{
+				createVOType = value;
 			}
 		}
 	}
