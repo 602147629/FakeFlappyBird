@@ -5,7 +5,7 @@ namespace CX.Obj
 {
 	public class ObjectPool : IObjectPool
 	{
-		private static readonly EmptyObject empty = new EmptyObject();
+		public static readonly EmptyObject empty = new EmptyObject();
 
 		public ObjectPool()
 		{
@@ -43,6 +43,15 @@ namespace CX.Obj
 			{
 				objCreater.Push(gameObject);
 			}			
+		}
+
+		public void ClearAllInPool()
+		{
+			foreach (PooledObjectCreater creater in pools.Values)
+			{
+				creater.Clear();
+			}
+			pools.Clear();
 		}
 
 		IDictionary<Type, PooledObjectCreater> pools;

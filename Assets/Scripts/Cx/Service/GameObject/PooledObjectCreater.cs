@@ -71,7 +71,20 @@ namespace CX.Obj
 				GenerateObjects(bornVO.BornCount / 2 + 1);
 				return Pop();
 			}
-		}		 
+		}	
+
+		/// <summary>
+		/// Destroy all objects.
+		/// </summary>
+		public virtual void Clear()
+		{
+			foreach (IGameObject obj in gameObjects)
+			{
+				obj.View.Destroy();
+			}
+
+			gameObjects.Clear();
+		}
 	}
 }
 

@@ -18,9 +18,14 @@ namespace GameTest
 		[SetUp]
 		public void SetUp()
 		{
-			objectPool = new ObjectPool();
-			objectPool.RegCreater(new U3DPooledObjectCreater(new UpBlockBornVO ()));
-			objectPool.RegCreater(new U3DPooledObjectCreater(new MainCharacterBornVO ()));
+			SetupPool ();
+		}
+
+		void SetupPool ()
+		{
+			objectPool = new ObjectPool ();
+			objectPool.RegCreater (new U3DPooledObjectCreater (new UpBlockBornVO ()));
+			objectPool.RegCreater (new U3DPooledObjectCreater (new MainCharacterBornVO ()));
 		}
 
 		IGameObject GetOne (Type type)
@@ -45,10 +50,20 @@ namespace GameTest
 			Assert.AreEqual(get.View.IsActive, true);
 		}
 
+		[Test]
+		public void ClearPool()
+		{
+			objectPool.ClearAllInPool();
+
+			var get = GetOne(typeof(MainCharacterBornVO));
+
+			Assert.AreEqual(get, ObjectPool.empty);
+		}
+
 		[TearDown]
 		public void TearDown()
 		{
-
+			objectPool.ClearAllInPool();
 		}
 	}
 }

@@ -26,6 +26,12 @@ namespace CX.Obj
 		/// </summary>
 		/// <param name="gameObject">Game object.</param>
 		void PutBack(IGameObject gameObject);
+
+		/// <summary>
+		/// Clears all objects in pool.
+		/// This operation will destroys all objects except that were popped out from pool.
+		/// </summary>
+		void ClearAllInPool();
 	}
 }
 
