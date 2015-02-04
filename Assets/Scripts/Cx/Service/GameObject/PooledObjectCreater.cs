@@ -20,7 +20,7 @@ namespace CX.Obj
 		protected PooledObjectCreater(BornVO bornVO)
 		{
 			this.bornVO = bornVO;
-			this.createType = Type.GetType(bornVO.ObjectType);
+			this.createType = this.bornVO.GetType();
 			gameObjects = new Stack<IGameObject>();
 		}
 

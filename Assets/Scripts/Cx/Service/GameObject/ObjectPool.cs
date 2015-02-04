@@ -5,7 +5,7 @@ namespace CX.Obj
 {
 	public class ObjectPool : IObjectPool
 	{
-		private static readonly EmptyObject empty;
+		private static readonly EmptyObject empty = new EmptyObject();
 
 		public ObjectPool()
 		{
@@ -14,10 +14,11 @@ namespace CX.Obj
 
 		public void RegCreater (PooledObjectCreater creater)
 		{
-			if (creater.CreateType != null)
+			var createType = creater.CreateType;
+			if (createType != null && !pools.ContainsKey(createType))
 			{
 				creater.StartGenerate();
-				pools.Add(creater.CreateType, creater);
+				pools.Add (createType, creater);
 			}
 		}
 

@@ -15,10 +15,10 @@ namespace CX.Obj
 		void RegCreater(PooledObjectCreater creater);
 
 		/// <summary>
-		/// Gets one specified type object from pool.
+		/// Gets one object from pool by object's born vo.
 		/// </summary>
 		/// <returns>The one.</returns>
-		/// <param name="type">Object Type.</param>
+		/// <param name="type">Object Born VO Type.<see cref="CX.Obj.BornVO"/></param>
 		IGameObject GetOne(Type type);
 
 		/// <summary>
