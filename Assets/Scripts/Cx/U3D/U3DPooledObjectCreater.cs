@@ -22,13 +22,19 @@ namespace CX.U3D
 		public override IGameObject Pop()
 		{
 			IGameObject obj =  base.Pop();
-			obj.View.Active(true);
+			if (obj is ICxObject)
+				(obj as ICxObject).Create();
+			else
+				obj.View.Active(true);
 			return obj;
 		}
 
 		public override void Push (IGameObject obj)
 		{
-			obj.View.Active(false);
+			if (obj is ICxObject)
+				(obj as ICxObject).Destroy();
+			else
+				obj.View.Active(false);
 			base.Push (obj);
 		}
 	}

@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+using CX;
 
 namespace SimpleTest
 {
@@ -58,6 +59,16 @@ namespace SimpleTest
 			Assert.AreEqual(a1.num2, 4);
 			Assert.AreEqual(a2.num1, 1);
 			Assert.AreEqual(a2.num2, 2);
+		}
+
+		[Test]
+		public void CreateObj()
+		{
+			A a = CreateHelper.Create<A>( 1, 2);
+
+			Assert.AreEqual(a.num1, 1);
+			Assert.AreEqual(a.num2, 2);
+
 		}
 
 	}
