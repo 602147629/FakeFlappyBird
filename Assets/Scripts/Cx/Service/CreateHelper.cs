@@ -7,7 +7,7 @@ namespace CX
 	/// </summary>
 	public class CreateHelper
 	{
-		private static object Create(Type type, params object[] objects)
+		public static object Create(Type type, params object[] objects)
 		{
 			object obj = null;
 

@@ -6,23 +6,37 @@ namespace CX.U3D.Obj
 {
 	public class CxGameObject : ICxObject, IGameObject
 	{
-		private ObjectCreater creater;
 		private GameObjectBornVO bornVO;
+		private U3DGameObjectView u3dView;
 
 		public CxGameObject (GameObjectBornVO bornVO)
 		{
 			this.bornVO = bornVO;
-			creater = new U3DObjectCreater();
+			CreateGameObjectView(bornVO.ResPath);
+		}
+
+		void CreateGameObjectView(string resPath)
+		{
+			var res = MyResources.Load(resPath);
+			var ins = GameObject.Instantiate(res) as GameObject;
+			u3dView = ins.GetComponent<U3DGameObjectView>();
+			if (u3dView == null) u3dView = ins.AddComponent<U3DGameObjectView>();
+			View = u3dView as IGameObjectView;
 		}
 
 		public virtual void Create()
 		{
-			creater.Create(bornVO);
+			u3dView.transform.localPosition = bornVO.Position;
+			u3dView.transform.localScale = bornVO.Scale;
+			u3dView.transform.localRotation = bornVO.Rotation;
+
+			u3dView.gameObject.SetActive(true);
 		}
 
 		public virtual void Destroy()
 		{
-			View.Destroy();
+			u3dView.gameObject.SetActive(false);
+			//View.Destroy();
 		}
 
 		public IGameObjectView View

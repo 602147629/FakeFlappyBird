@@ -1,0 +1,408 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Active	./Cx/Service/GameObject/IGameObjectView.cs	/^		void Active(bool isActive);$/;"	m	interface:CX.Obj.IGameObjectView
+Active	./Cx/U3D/U3DGameObjectView.cs	/^		public void Active(bool isActive)$/;"	m	class:CX.U3D.U3DGameObjectView
+AddChild	./Util/ComponentTool.cs	/^	public static void AddChild(GameObject parent, GameObject child)$/;"	m	class:ComponentTool
+AddObserver	./Cx/Service/IObservable.cs	/^		void AddObserver(IObserver observer);$/;"	m	interface:CX.IObservable
+AddToUIRoot	./Game/ViewLoader.cs	/^		void AddToUIRoot(GameObject view)$/;"	m	class:Game.ViewLoader	file:
+Awake	./Game/DestroyOutOfCamera.cs	/^	void Awake()$/;"	m	class:DestroyOutOfCamera	file:
+Awake	./Game/Main.cs	/^	void Awake()$/;"	m	class:Main	file:
+Awake	./Game/TransformMover.cs	/^		void Awake()$/;"	m	class:Level.TransformMover	file:
+Awake	./Util/DontDestroy.cs	/^	void Awake()$/;"	m	class:DontDestroy	file:
+Awake	./View/GameOverView.cs	/^		void Awake()$/;"	m	class:Game.View.GameOverView	file:
+Awake	./View/InGameView.cs	/^		void Awake()$/;"	m	class:Game.View.InGameView	file:
+Awake	./View/WelcomeView.cs	/^		void Awake()$/;"	m	class:Game.View.WelcomeView	file:
+Back	./Cx/Service/Views/IViewFlow.cs	/^		IView Back();$/;"	m	interface:CX.MVP.View.IViewFlow
+Back	./Cx/Service/Views/IViewFlow.cs	/^		IView Back(string viewName);$/;"	m	interface:CX.MVP.View.IViewFlow
+Back	./Cx/Service/Views/ViewFlow.cs	/^		public IView Back()$/;"	m	class:CX.MVP.View.ViewFlow
+Back	./Cx/Service/Views/ViewFlow.cs	/^		public IView Back(string viewName)$/;"	m	class:CX.MVP.View.ViewFlow
+BecomeInvisible	./Game/Character/Blocker/BlockerView.cs	/^		IEnumerator BecomeInvisible()$/;"	m	class:Game.Character.BlockerView	file:
+BlockBornVO	./Game/Character/Blocker/BlockBornVO.cs	/^		protected BlockBornVO()$/;"	m	class:Game.BlockBornVO
+BlockBornVO	./Game/Character/Blocker/BlockBornVO.cs	/^	public class BlockBornVO : GameObjectBornVO$/;"	c	namespace:Game
+BlockerCharacter	./Game/Character/Blocker/BlockerCharacter.cs	/^	public class BlockerCharacter : CharacterBase$/;"	c	namespace:Game.Character
+BlockerView	./Game/Character/Blocker/BlockerView.cs	/^	public class BlockerView : CharacterView $/;"	c	namespace:Game.Character
+BornCount	./Cx/Service/GameObject/BornVO.cs	/^		public int BornCount$/;"	p	class:CX.Obj.BornVO
+BornVO	./Cx/Service/GameObject/BornVO.cs	/^	public class BornVO$/;"	c	namespace:CX.Obj
+CX	./Cx/Service/CreateHelper.cs	/^namespace CX$/;"	n
+CX	./Cx/Service/IObservable.cs	/^namespace CX$/;"	n
+CX	./Cx/Service/IObserver.cs	/^﻿namespace CX$/;"	n
+CX.Character	./Cx/Service/Character/CharacterBase.cs	/^namespace CX.Character$/;"	n
+CX.Character	./Cx/Service/Character/CharacterLife.cs	/^namespace CX.Character$/;"	n
+CX.Character	./Cx/Service/Character/ICharacter.cs	/^namespace CX.Character$/;"	n
+CX.Character	./Cx/Service/Character/ICharacterLifeCyle.cs	/^namespace CX.Character$/;"	n
+CX.Character	./Cx/Service/Character/ICharacterView.cs	/^namespace CX.Character$/;"	n
+CX.MVP.Presenter	./Cx/Service/Presenter/IPresenter.cs	/^namespace CX.MVP.Presenter$/;"	n
+CX.MVP.Presenter	./Cx/Service/Presenter/IPresenterGeneric.cs	/^namespace CX.MVP.Presenter$/;"	n
+CX.MVP.Presenter	./Cx/Service/Presenter/IViewNavable.cs	/^namespace CX.MVP.Presenter$/;"	n
+CX.MVP.Presenter	./Cx/Service/Presenter/NavPresenter.cs	/^namespace CX.MVP.Presenter$/;"	n
+CX.MVP.Presenter	./Cx/Service/Presenter/NavPresenterGeneric.cs	/^namespace CX.MVP.Presenter$/;"	n
+CX.MVP.Presenter	./Cx/Service/Presenter/PresenterBase.cs	/^namespace CX.MVP.Presenter$/;"	n
+CX.MVP.Presenter	./Cx/Service/Presenter/PresenterBaseGeneric.cs	/^namespace CX.MVP.Presenter$/;"	n
+CX.MVP.View	./Cx/Service/Views/IView.cs	/^namespace CX.MVP.View$/;"	n
+CX.MVP.View	./Cx/Service/Views/IViewFlow.cs	/^namespace CX.MVP.View$/;"	n
+CX.MVP.View	./Cx/Service/Views/IViewManager.cs	/^namespace CX.MVP.View$/;"	n
+CX.MVP.View	./Cx/Service/Views/ViewBase.cs	/^namespace CX.MVP.View$/;"	n
+CX.MVP.View	./Cx/Service/Views/ViewFlow.cs	/^namespace CX.MVP.View$/;"	n
+CX.MVP.View	./Cx/Service/Views/ViewManagerBase.cs	/^namespace CX.MVP.View$/;"	n
+CX.Obj	./Cx/Service/CxObj/CxObject.cs	/^﻿namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/CxObj/CxObjectGeneric.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/BornVO.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/IGameObject.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/IGameObjectView.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/IMovable.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/IObjectPool.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/IPooledObject.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/ObjectCreater.cs	/^﻿namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/ObjectPool.cs	/^namespace CX.Obj$/;"	n
+CX.Obj	./Cx/Service/GameObject/PooledObjectCreater.cs	/^namespace CX.Obj$/;"	n
+CX.U3D	./Cx/U3D/GameObjectBornVO.cs	/^namespace CX.U3D$/;"	n
+CX.U3D	./Cx/U3D/U3DGameObjectView.cs	/^namespace CX.U3D$/;"	n
+CX.U3D	./Cx/U3D/U3DObjectCreater.cs	/^namespace CX.U3D$/;"	n
+CX.U3D	./Cx/U3D/U3DPooledObjectCreater.cs	/^namespace CX.U3D$/;"	n
+CX.U3D.Character	./Cx/U3D/Character/CharacterView.cs	/^namespace CX.U3D.Character$/;"	n
+CX.U3D.MVP.View	./Cx/U3D/U3DView.cs	/^namespace CX.U3D.MVP.View$/;"	n
+CX.U3D.MVP.View	./Cx/U3D/U3DViewManager.cs	/^namespace CX.U3D.MVP.View$/;"	n
+CX.U3D.Obj	./Cx/U3D/CxObj/CxGameObject.cs	/^namespace CX.U3D.Obj$/;"	n
+Character	./Cx/Service/Character/ICharacterView.cs	/^		ICharacter Character { get; set; }$/;"	p	interface:CX.Character.ICharacterView
+Character	./Cx/U3D/Character/CharacterView.cs	/^		public ICharacter Character {$/;"	p	class:CX.U3D.Character.CharacterView
+CharacterBase	./Cx/Service/Character/CharacterBase.cs	/^	public abstract class CharacterBase : ICharacter$/;"	c	namespace:CX.Character
+CharacterHealth	./Game/Character/CharacterHealth.cs	/^	public class CharacterHealth$/;"	c	namespace:Game.Character
+CharacterLife	./Cx/Service/Character/CharacterLife.cs	/^	public abstract class CharacterLife : ICharacterLifeCyle$/;"	c	namespace:CX.Character
+CharacterMotor	./Game/Character/MainCharacter/CharacterMotor.cs	/^	public class CharacterMotor : MonoBehaviour$/;"	c	namespace:Game.Character
+CharacterView	./Cx/U3D/Character/CharacterView.cs	/^	public class CharacterView : U3DGameObjectView, ICharacterView$/;"	c	namespace:CX.U3D.Character
+Clear	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		public virtual void Clear()$/;"	m	class:CX.Obj.PooledObjectCreater
+ClearAllInPool	./Cx/Service/GameObject/IObjectPool.cs	/^		void ClearAllInPool();$/;"	m	interface:CX.Obj.IObjectPool
+ClearAllInPool	./Cx/Service/GameObject/ObjectPool.cs	/^		public void ClearAllInPool()$/;"	m	class:CX.Obj.ObjectPool
+ComponentTool	./Util/ComponentTool.cs	/^public class ComponentTool$/;"	c
+Create	./Cx/Service/CreateHelper.cs	/^		public static object Create(string typeName)$/;"	m	class:CX.CreateHelper
+Create	./Cx/Service/CxObj/CxObject.cs	/^		void Create();$/;"	m	interface:CX.Obj.ICxObject
+Create	./Cx/Service/CxObj/CxObjectGeneric.cs	/^		public abstract void Create();$/;"	m	class:CX.Obj.CxObject
+Create	./Cx/Service/GameObject/ObjectCreater.cs	/^		public abstract IGameObject Create(BornVO bornVO);		$/;"	m	class:CX.Obj.ObjectCreater
+Create	./Cx/U3D/CxObj/CxGameObject.cs	/^		public virtual void Create()$/;"	m	class:CX.U3D.Obj.CxGameObject
+Create	./Cx/U3D/U3DObjectCreater.cs	/^		public override IGameObject Create(BornVO bornVO)$/;"	m	class:CX.U3D.U3DObjectCreater
+CreateHelper	./Cx/Service/CreateHelper.cs	/^	public class CreateHelper$/;"	c	namespace:CX
+CreateType	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		public Type CreateType $/;"	p	class:CX.Obj.PooledObjectCreater
+CreateVOType	./Cx/Service/Character/CharacterBase.cs	/^		public Type CreateVOType$/;"	p	class:CX.Character.CharacterBase
+CreateVOType	./Cx/Service/GameObject/IPooledObject.cs	/^		Type CreateVOType { get; set; }$/;"	p	interface:CX.Obj.IPooledObject
+CreateVOType	./Cx/Service/GameObject/ObjectPool.cs	/^			public Type CreateVOType$/;"	p	class:CX.Obj.ObjectPool.EmptyObject
+CreateVOType	./Cx/U3D/CxObj/CxGameObject.cs	/^		public Type CreateVOType$/;"	p	class:CX.U3D.Obj.CxGameObject
+CreateView	./Cx/Service/Views/IViewManager.cs	/^		IView CreateView(object viewResource);$/;"	m	interface:CX.MVP.View.IViewManager
+CreateView	./Cx/U3D/U3DViewManager.cs	/^		public IView CreateView(object viewResource)$/;"	m	class:CX.U3D.MVP.View.U3DViewManager
+CurrentView	./Cx/Service/Views/IViewFlow.cs	/^		IView CurrentView { get; }$/;"	p	interface:CX.MVP.View.IViewFlow
+CurrentView	./Cx/Service/Views/ViewFlow.cs	/^		public IView CurrentView $/;"	p	class:CX.MVP.View.ViewFlow
+CxGameObject	./Cx/U3D/CxObj/CxGameObject.cs	/^		public CxGameObject (GameObjectBornVO bornVO)$/;"	m	class:CX.U3D.Obj.CxGameObject
+CxGameObject	./Cx/U3D/CxObj/CxGameObject.cs	/^	public class CxGameObject : ICxObject, IGameObject$/;"	c	namespace:CX.U3D.Obj
+CxObject	./Cx/Service/CxObj/CxObjectGeneric.cs	/^		protected CxObject(T bornVO)$/;"	m	class:CX.Obj.CxObject
+CxObject	./Cx/Service/CxObj/CxObjectGeneric.cs	/^	public abstract class CxObject<T> : ICxObject$/;"	c	namespace:CX.Obj
+Dead	./Cx/Service/Character/CharacterLife.cs	/^		public virtual void Dead()$/;"	m	class:CX.Character.CharacterLife
+Dead	./Cx/Service/Character/ICharacterLifeCyle.cs	/^		void Dead();$/;"	m	interface:CX.Character.ICharacterLifeCyle
+Dead	./Game/Character/MainCharacter/MainCharacter.cs	/^			public void Dead()$/;"	m	class:Game.Character.MainCharacter.MainCharacterLife
+DecreaseHealth	./Game/Character/CharacterHealth.cs	/^		public void DecreaseHealth(int decrease)$/;"	m	class:Game.Character.CharacterHealth
+Destroy	./Cx/Service/CxObj/CxObject.cs	/^		void Destroy();$/;"	m	interface:CX.Obj.ICxObject
+Destroy	./Cx/Service/CxObj/CxObjectGeneric.cs	/^		public abstract void Destroy();$/;"	m	class:CX.Obj.CxObject
+Destroy	./Cx/Service/GameObject/IGameObjectView.cs	/^		void Destroy();$/;"	m	interface:CX.Obj.IGameObjectView
+Destroy	./Cx/U3D/CxObj/CxGameObject.cs	/^		public virtual void Destroy()$/;"	m	class:CX.U3D.Obj.CxGameObject
+Destroy	./Cx/U3D/U3DGameObjectView.cs	/^		public void Destroy()$/;"	m	class:CX.U3D.U3DGameObjectView
+Destroy	./Util/ComponentTool.cs	/^	public static void Destroy(GameObject toDestroy)$/;"	m	class:ComponentTool
+DestroyOutOfCamera	./Game/DestroyOutOfCamera.cs	/^public class DestroyOutOfCamera : MonoBehaviour$/;"	c
+DontDestroy	./Util/DontDestroy.cs	/^public class DontDestroy : MonoBehaviour {$/;"	c
+DownBlockBornVO	./Game/Character/Blocker/BlockBornVO.cs	/^		public DownBlockBornVO ()$/;"	m	class:Game.DownBlockBornVO
+DownBlockBornVO	./Game/Character/Blocker/BlockBornVO.cs	/^	public class DownBlockBornVO : BlockBornVO$/;"	c	namespace:Game
+EmptyObject	./Cx/Service/GameObject/ObjectPool.cs	/^		public class EmptyObject : IGameObject$/;"	c	class:CX.Obj.ObjectPool
+EmptyView	./Cx/Service/Views/ViewManagerBase.cs	/^		public static readonly IView EmptyView = new NullView();$/;"	f	class:CX.MVP.View.ViewManagerBase
+FixedUpdate	./Game/Character/MainCharacter/CharacterMotor.cs	/^		void FixedUpdate()$/;"	m	class:Game.Character.CharacterMotor	file:
+Forward	./Cx/Service/Views/IViewFlow.cs	/^		void Forward(string viewName);$/;"	m	interface:CX.MVP.View.IViewFlow
+Forward	./Cx/Service/Views/ViewFlow.cs	/^		public void Forward(string viewName)$/;"	m	class:CX.MVP.View.ViewFlow
+Game	./Game/Character/Blocker/BlockBornVO.cs	/^namespace Game$/;"	n
+Game	./Game/Character/MainCharacter/MainCharacterBornVo.cs	/^namespace Game$/;"	n
+Game	./Game/GameFacade.cs	/^namespace Game$/;"	n
+Game	./Game/LevelLoader.cs	/^namespace Game$/;"	n
+Game	./Game/ViewLoader.cs	/^namespace Game$/;"	n
+Game.Character	./Game/Character/Blocker/BlockerCharacter.cs	/^namespace Game.Character$/;"	n
+Game.Character	./Game/Character/Blocker/BlockerView.cs	/^namespace Game.Character$/;"	n
+Game.Character	./Game/Character/CharacterHealth.cs	/^namespace Game.Character$/;"	n
+Game.Character	./Game/Character/MainCharacter/CharacterMotor.cs	/^namespace Game.Character$/;"	n
+Game.Character	./Game/Character/MainCharacter/MainCharacter.cs	/^namespace Game.Character$/;"	n
+Game.Character	./Game/Character/MainCharacter/MainCharacterView.cs	/^namespace Game.Character$/;"	n
+Game.View	./Presenter/GameOverViewPresenter.cs	/^namespace Game.View$/;"	n
+Game.View	./Presenter/IGameOverView.cs	/^namespace Game.View$/;"	n
+Game.View	./Presenter/IInGameView.cs	/^namespace Game.View$/;"	n
+Game.View	./Presenter/IWelcomeView.cs	/^namespace Game.View$/;"	n
+Game.View	./Presenter/InGameViewPresenter.cs	/^namespace Game.View$/;"	n
+Game.View	./Presenter/WelcomeViewPresenter.cs	/^namespace Game.View$/;"	n
+Game.View	./View/GameOverView.cs	/^namespace Game.View$/;"	n
+Game.View	./View/InGameView.cs	/^namespace Game.View$/;"	n
+Game.View	./View/WelcomeView.cs	/^namespace Game.View$/;"	n
+GameFacade	./Game/GameFacade.cs	/^        public GameFacade()$/;"	m	class:Game.GameFacade
+GameFacade	./Game/GameFacade.cs	/^    public class GameFacade$/;"	c	namespace:Game
+GameFlow	./Game/GameFacade.cs	/^		public static IGameFlow GameFlow;$/;"	f	class:Game.GameFacade
+GameFlowController	./Cx/U3D/GameFlowController.cs	/^public class GameFlowController : IGameFlow$/;"	c
+GameObjectBornVO	./Cx/U3D/GameObjectBornVO.cs	/^	public class GameObjectBornVO : BornVO$/;"	c	namespace:CX.U3D
+GameOverView	./View/GameOverView.cs	/^	public class GameOverView : U3DView, IGameOverView {$/;"	c	namespace:Game.View
+GameOverViewPresenter	./Presenter/GameOverViewPresenter.cs	/^	public class GameOverViewPresenter : NavPresenter<IGameOverView>$/;"	c	namespace:Game.View
+GameScore	./Model/GameScore.cs	/^	public class GameScore $/;"	c	namespace:Model
+GenerateObjects	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		protected virtual void GenerateObjects(int count)$/;"	m	class:CX.Obj.PooledObjectCreater
+GenerateOne	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		protected abstract IGameObject GenerateOne();$/;"	m	class:CX.Obj.PooledObjectCreater
+GenerateOne	./Cx/U3D/U3DPooledObjectCreater.cs	/^		protected override IGameObject GenerateOne ()$/;"	m	class:CX.U3D.U3DPooledObjectCreater
+GetOne	./Cx/Service/GameObject/IObjectPool.cs	/^		IGameObject GetOne(Type type);$/;"	m	interface:CX.Obj.IObjectPool
+GetOne	./Cx/Service/GameObject/ObjectPool.cs	/^		public IGameObject GetOne(Type type)$/;"	m	class:CX.Obj.ObjectPool
+GetRes	./Cx/U3D/U3DObjectCreater.cs	/^		Object GetRes(string resPath)$/;"	m	class:CX.U3D.U3DObjectCreater	file:
+GetView	./Cx/Service/Views/IViewManager.cs	/^		IView GetView(string viewName);$/;"	m	interface:CX.MVP.View.IViewManager
+GetView	./Cx/U3D/U3DViewManager.cs	/^		public IView GetView(string viewName)$/;"	m	class:CX.U3D.MVP.View.U3DViewManager
+HandleOnExitClick	./Presenter/GameOverViewPresenter.cs	/^		void HandleOnExitClick (object sender, System.EventArgs e)$/;"	m	class:Game.View.GameOverViewPresenter	file:
+HandleOnReStartGameClick	./Presenter/GameOverViewPresenter.cs	/^		void HandleOnReStartGameClick (object sender, System.EventArgs e)$/;"	m	class:Game.View.GameOverViewPresenter	file:
+HasView	./Cx/Service/Views/ViewFlow.cs	/^		bool HasView()$/;"	m	class:CX.MVP.View.ViewFlow	file:
+Health	./Game/Character/CharacterHealth.cs	/^		public float Health $/;"	p	class:Game.Character.CharacterHealth
+HostObject	./Cx/Service/GameObject/IGameObjectView.cs	/^		IGameObject HostObject { get; set; }$/;"	p	interface:CX.Obj.IGameObjectView
+HostObject	./Cx/U3D/U3DGameObjectView.cs	/^		public IGameObject HostObject$/;"	p	class:CX.U3D.U3DGameObjectView
+ICharacter	./Cx/Service/Character/ICharacter.cs	/^	public interface ICharacter : IGameObject$/;"	i	namespace:CX.Character
+ICharacterLifeCyle	./Cx/Service/Character/ICharacterLifeCyle.cs	/^	public interface ICharacterLifeCyle$/;"	i	namespace:CX.Character
+ICharacterView	./Cx/Service/Character/ICharacterView.cs	/^	public interface ICharacterView : IGameObjectView$/;"	i	namespace:CX.Character
+ICxObject	./Cx/Service/CxObj/CxObject.cs	/^	public interface  ICxObject$/;"	i	namespace:CX.Obj
+IGameFlow	./Cx/U3D/IGameFlow.cs	/^public interface IGameFlow$/;"	i
+IGameObject	./Cx/Service/GameObject/IGameObject.cs	/^	public interface IGameObject : IPooledObject$/;"	i	namespace:CX.Obj
+IGameObject.View	./Cx/Service/Character/CharacterBase.cs	/^		IGameObjectView IGameObject.View$/;"	p	class:CX.Character.CharacterBase
+IGameObjectView	./Cx/Service/GameObject/IGameObjectView.cs	/^	public interface IGameObjectView$/;"	i	namespace:CX.Obj
+IGameOverView	./Presenter/IGameOverView.cs	/^	public interface IGameOverView$/;"	i	namespace:Game.View
+IInGameView	./Presenter/IInGameView.cs	/^	public interface IInGameView$/;"	i	namespace:Game.View
+IMovable	./Cx/Service/GameObject/IMovable.cs	/^	public interface IMovable$/;"	i	namespace:CX.Obj
+IObjectPool	./Cx/Service/GameObject/IObjectPool.cs	/^	public interface IObjectPool$/;"	i	namespace:CX.Obj
+IObservable	./Cx/Service/IObservable.cs	/^	public interface IObservable$/;"	i	namespace:CX
+IObserver	./Cx/Service/IObserver.cs	/^	public interface IObserver$/;"	i	namespace:CX
+IPooledObject	./Cx/Service/GameObject/IPooledObject.cs	/^	public interface IPooledObject$/;"	i	namespace:CX.Obj
+IPresenter	./Cx/Service/Presenter/IPresenter.cs	/^	public interface IPresenter$/;"	i	namespace:CX.MVP.Presenter
+IPresenter	./Cx/Service/Presenter/IPresenterGeneric.cs	/^	public interface IPresenter<TView> : IPresenter where TView : class$/;"	i	namespace:CX.MVP.Presenter
+IPresenter.View	./Cx/Service/Presenter/PresenterBaseGeneric.cs	/^		IView IPresenter.View$/;"	p	class:CX.MVP.Presenter.PresenterBase
+IView	./Cx/Service/Views/IView.cs	/^	public interface IView$/;"	i	namespace:CX.MVP.View
+IView	./Cx/Service/Views/IViewManager.cs	/^		TView CreateView<TView>(object viewResource) where TView : class, IView;$/;"	f	interface:CX.MVP.View.IViewManager
+IView	./Cx/Service/Views/IViewManager.cs	/^		TView GetView<TView>(string viewName) where TView : class, IView;$/;"	f	interface:CX.MVP.View.IViewManager
+IView	./Cx/U3D/U3DViewManager.cs	/^		public TView CreateView<TView>(object viewResource) where TView : class, IView$/;"	c	class:CX.U3D.MVP.View.U3DViewManager
+IView	./Cx/U3D/U3DViewManager.cs	/^		public TView GetView<TView>(string viewName) where TView : class, IView$/;"	c	class:CX.U3D.MVP.View.U3DViewManager
+IViewFlow	./Cx/Service/Views/IViewFlow.cs	/^	public interface IViewFlow$/;"	i	namespace:CX.MVP.View
+IViewManager	./Cx/Service/Views/IViewManager.cs	/^	public interface IViewManager$/;"	i	namespace:CX.MVP.View
+IViewNavable	./Cx/Service/Presenter/IViewNavable.cs	/^	public interface IViewNavable$/;"	i	namespace:CX.MVP.Presenter
+IWelcomeView	./Presenter/IWelcomeView.cs	/^	public interface IWelcomeView$/;"	i	namespace:Game.View
+InGameView	./View/InGameView.cs	/^	public class InGameView : U3DView, IInGameView$/;"	c	namespace:Game.View
+InGameViewPresenter	./Presenter/InGameViewPresenter.cs	/^		public InGameViewPresenter ()$/;"	m	class:Game.View.InGameViewPresenter
+InGameViewPresenter	./Presenter/InGameViewPresenter.cs	/^	public class InGameViewPresenter : NavPresenter<IInGameView>$/;"	c	namespace:Game.View
+IncreaseHealth	./Game/Character/CharacterHealth.cs	/^		public void IncreaseHealth(int increase)$/;"	m	class:Game.Character.CharacterHealth
+Init	./Presenter/GameOverViewPresenter.cs	/^		void Init()$/;"	m	class:Game.View.GameOverViewPresenter	file:
+InitGame	./Game/GameFacade.cs	/^		private void InitGame()$/;"	m	class:Game.GameFacade	file:
+InitView	./Game/GameFacade.cs	/^		private void InitView()$/;"	m	class:Game.GameFacade	file:
+InitializeView	./Cx/Service/Presenter/PresenterBase.cs	/^		protected virtual void InitializeView()$/;"	m	class:CX.MVP.Presenter.PresenterBase
+InitializeView	./Cx/Service/Presenter/PresenterBaseGeneric.cs	/^		protected virtual void InitializeView()$/;"	m	class:CX.MVP.Presenter.PresenterBase
+InitializeView	./Presenter/InGameViewPresenter.cs	/^		protected override void InitializeView()$/;"	m	class:Game.View.InGameViewPresenter
+InitializeView	./Presenter/WelcomeViewPresenter.cs	/^		protected override void InitializeView ()$/;"	m	class:Game.View.WelcomeViewPresenter
+IsActive	./Cx/Service/GameObject/IGameObjectView.cs	/^		bool IsActive { get; }$/;"	p	interface:CX.Obj.IGameObjectView
+IsActive	./Cx/U3D/U3DGameObjectView.cs	/^		public bool IsActive$/;"	p	class:CX.U3D.U3DGameObjectView
+IsMoving	./Cx/Service/GameObject/IMovable.cs	/^		bool IsMoving { get; }$/;"	p	interface:CX.Obj.IMovable
+IsMoving	./Game/TransformMover.cs	/^		public bool IsMoving$/;"	p	class:Level.TransformMover
+LEVEL	./Config/LevelConfig.cs	/^	public const string LEVEL = "Level";$/;"	f	class:LevelConfig
+Level	./Game/TransformMover.cs	/^namespace Level$/;"	n
+LevelConfig	./Config/LevelConfig.cs	/^﻿public class LevelConfig$/;"	c
+LevelLoader	./Game/LevelLoader.cs	/^	public class LevelLoader : MonoBehaviour $/;"	c	namespace:Game
+Life	./Cx/Service/Character/CharacterBase.cs	/^		public virtual ICharacterLifeCyle Life $/;"	p	class:CX.Character.CharacterBase
+Life	./Cx/Service/Character/ICharacter.cs	/^		ICharacterLifeCyle Life { get; set; }$/;"	p	interface:CX.Character.ICharacter
+LoadCompleted	./Game/LevelLoader.cs	/^		static Action LoadCompleted;$/;"	f	class:Game.LevelLoader	file:
+LoadLevel	./Game/LevelLoader.cs	/^		public static void LoadLevel(string levelName)$/;"	m	class:Game.LevelLoader
+LoadLevel	./Game/LevelLoader.cs	/^		public static void LoadLevel(string levelName, Action loadCompleted)$/;"	m	class:Game.LevelLoader
+LoadView	./Game/ViewLoader.cs	/^		public void LoadView()$/;"	m	class:Game.ViewLoader
+Main	./Game/Main.cs	/^public class Main : MonoBehaviour$/;"	c
+MainCharacter	./Game/Character/MainCharacter/MainCharacter.cs	/^		public MainCharacter ()$/;"	m	class:Game.Character.MainCharacter
+MainCharacter	./Game/Character/MainCharacter/MainCharacter.cs	/^	public class MainCharacter : CharacterBase$/;"	c	namespace:Game.Character
+MainCharacterBornVO	./Game/Character/MainCharacter/MainCharacterBornVo.cs	/^		public MainCharacterBornVO ()$/;"	m	class:Game.MainCharacterBornVO
+MainCharacterBornVO	./Game/Character/MainCharacter/MainCharacterBornVo.cs	/^	public class MainCharacterBornVO : GameObjectBornVO$/;"	c	namespace:Game
+MainCharacterLife	./Game/Character/MainCharacter/MainCharacter.cs	/^		public class MainCharacterLife : ICharacterLifeCyle$/;"	c	class:Game.Character.MainCharacter
+MainCharacterView	./Game/Character/MainCharacter/MainCharacterView.cs	/^	public class MainCharacterView : CharacterView$/;"	c	namespace:Game.Character
+Model	./Model/GameScore.cs	/^namespace Model$/;"	n
+NavBack	./Cx/Service/Presenter/IViewNavable.cs	/^		void NavBack();$/;"	m	interface:CX.MVP.Presenter.IViewNavable
+NavBack	./Cx/Service/Presenter/NavPresenter.cs	/^		public virtual void NavBack()$/;"	m	class:CX.MVP.Presenter.NavPresenter
+NavBack	./Cx/Service/Presenter/NavPresenterGeneric.cs	/^		public virtual void NavBack()$/;"	m	class:CX.MVP.Presenter.NavPresenter
+NavPresenter	./Cx/Service/Presenter/NavPresenter.cs	/^	public class NavPresenter : PresenterBase, IViewNavable$/;"	c	namespace:CX.MVP.Presenter
+NavPresenter	./Cx/Service/Presenter/NavPresenterGeneric.cs	/^	public class NavPresenter<TView> : PresenterBase<TView>, IViewNavable where TView : class$/;"	c	namespace:CX.MVP.Presenter
+NavTo	./Cx/Service/Presenter/IViewNavable.cs	/^		void NavTo(string viewName);$/;"	m	interface:CX.MVP.Presenter.IViewNavable
+NavTo	./Cx/Service/Presenter/NavPresenter.cs	/^		public virtual void NavTo(string viewName)$/;"	m	class:CX.MVP.Presenter.NavPresenter
+NavTo	./Cx/Service/Presenter/NavPresenterGeneric.cs	/^		public virtual void NavTo(string viewName)$/;"	m	class:CX.MVP.Presenter.NavPresenter
+NullView	./Cx/Service/Views/ViewManagerBase.cs	/^		public class NullView : IView$/;"	c	class:CX.MVP.View.ViewManagerBase
+ObjectCreater	./Cx/Service/GameObject/ObjectCreater.cs	/^	public abstract class ObjectCreater$/;"	c	namespace:CX.Obj
+ObjectPool	./Cx/Service/GameObject/ObjectPool.cs	/^		public ObjectPool()$/;"	m	class:CX.Obj.ObjectPool
+ObjectPool	./Cx/Service/GameObject/ObjectPool.cs	/^	public class ObjectPool : IObjectPool$/;"	c	namespace:CX.Obj
+ObjectPool	./Game/GameFacade.cs	/^		public static IObjectPool ObjectPool;$/;"	f	class:Game.GameFacade
+ObjectSpawner	./Game/ObjectSpawner.cs	/^public class ObjectSpawner : MonoBehaviour$/;"	c
+ObjectType	./Cx/Service/GameObject/BornVO.cs	/^		public string ObjectType$/;"	p	class:CX.Obj.BornVO
+OnBecameInvisible	./Game/DestroyOutOfCamera.cs	/^	void OnBecameInvisible()$/;"	m	class:DestroyOutOfCamera	file:
+OnEnable	./Game/Character/Blocker/BlockerView.cs	/^		void OnEnable () $/;"	m	class:Game.Character.BlockerView	file:
+OnExitClick	./Presenter/IGameOverView.cs	/^		event EventHandler OnExitClick;$/;"	E	interface:Game.View.IGameOverView
+OnExitClick	./View/GameOverView.cs	/^		public event EventHandler OnExitClick;$/;"	E	class:Game.View.GameOverView
+OnLevelWasLoaded	./Game/LevelLoader.cs	/^		void OnLevelWasLoaded(int level) $/;"	m	class:Game.LevelLoader	file:
+OnPause	./Presenter/InGameViewPresenter.cs	/^		private void OnPause()$/;"	m	class:Game.View.InGameViewPresenter	file:
+OnPauseEvent	./Presenter/IInGameView.cs	/^		Button.ButtonClickedEvent OnPauseEvent { get; }$/;"	p	interface:Game.View.IInGameView
+OnPauseEvent	./View/InGameView.cs	/^		public Button.ButtonClickedEvent OnPauseEvent$/;"	p	class:Game.View.InGameView
+OnReStartGameClick	./Presenter/IGameOverView.cs	/^		event EventHandler OnReStartGameClick;$/;"	E	interface:Game.View.IGameOverView
+OnReStartGameClick	./View/GameOverView.cs	/^		public event EventHandler OnReStartGameClick;$/;"	E	class:Game.View.GameOverView
+OnStartGameEvent	./Presenter/IWelcomeView.cs	/^		Button.ButtonClickedEvent OnStartGameEvent { get; }$/;"	p	interface:Game.View.IWelcomeView
+OnStartGameEvent	./View/WelcomeView.cs	/^		public Button.ButtonClickedEvent OnStartGameEvent$/;"	p	class:Game.View.WelcomeView
+OnTriggerEnter	./Game/Character/MainCharacter/MainCharacterView.cs	/^		void OnTriggerEnter(Collider other) $/;"	m	class:Game.Character.MainCharacterView	file:
+Pause	./Cx/U3D/GameFlowController.cs	/^	public void Pause()$/;"	m	class:GameFlowController
+Pause	./Cx/U3D/IGameFlow.cs	/^	void Pause();$/;"	m	interface:IGameFlow
+PauseBtnText	./Presenter/IInGameView.cs	/^		string PauseBtnText { get; set; }$/;"	p	interface:Game.View.IInGameView
+PauseBtnText	./View/InGameView.cs	/^		public string PauseBtnText$/;"	p	class:Game.View.InGameView
+PooledObjectCreater	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		protected PooledObjectCreater(BornVO bornVO)$/;"	m	class:CX.Obj.PooledObjectCreater
+PooledObjectCreater	./Cx/Service/GameObject/PooledObjectCreater.cs	/^	public abstract class PooledObjectCreater$/;"	c	namespace:CX.Obj
+Pop	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		public virtual IGameObject Pop()$/;"	m	class:CX.Obj.PooledObjectCreater
+Pop	./Cx/U3D/U3DPooledObjectCreater.cs	/^		public override IGameObject Pop()$/;"	m	class:CX.U3D.U3DPooledObjectCreater
+Position	./Cx/U3D/GameObjectBornVO.cs	/^		public virtual Vector3 Position$/;"	p	class:CX.U3D.GameObjectBornVO
+Presenter	./Cx/Service/Views/IView.cs	/^		IPresenter Presenter { get; set; }$/;"	p	interface:CX.MVP.View.IView
+Presenter	./Cx/Service/Views/ViewBase.cs	/^		public IPresenter Presenter$/;"	p	class:CX.MVP.View.ViewBase
+Presenter	./Cx/Service/Views/ViewManagerBase.cs	/^			public IPresenter Presenter$/;"	p	class:CX.MVP.View.ViewManagerBase.NullView
+Presenter	./Cx/U3D/U3DView.cs	/^		public IPresenter Presenter$/;"	p	class:CX.U3D.MVP.View.U3DView
+PresenterBase	./Cx/Service/Presenter/PresenterBase.cs	/^	public abstract class PresenterBase : IPresenter$/;"	c	namespace:CX.MVP.Presenter
+PresenterBase	./Cx/Service/Presenter/PresenterBaseGeneric.cs	/^	public abstract class PresenterBase<TView> : IPresenter<TView> where TView : class$/;"	c	namespace:CX.MVP.Presenter
+Push	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		public virtual void Push(IGameObject obj)$/;"	m	class:CX.Obj.PooledObjectCreater
+Push	./Cx/U3D/U3DPooledObjectCreater.cs	/^		public override void Push (IGameObject obj)$/;"	m	class:CX.U3D.U3DPooledObjectCreater
+PutBack	./Cx/Service/GameObject/IObjectPool.cs	/^		void PutBack(IGameObject gameObject);$/;"	m	interface:CX.Obj.IObjectPool
+PutBack	./Cx/Service/GameObject/ObjectPool.cs	/^		public void PutBack(IGameObject gameObject)$/;"	m	class:CX.Obj.ObjectPool
+RegBtnEvent	./View/GameOverView.cs	/^		void RegBtnEvent(Button btn, EventHandler eventHandler)$/;"	m	class:Game.View.GameOverView	file:
+RegBtnEvent	./View/GameOverView.cs	/^		void RegBtnEvent(Button btn, EventHandler eventHandler, object sender, EventArgs e)$/;"	m	class:Game.View.GameOverView	file:
+RegCreater	./Cx/Service/GameObject/IObjectPool.cs	/^		void RegCreater(PooledObjectCreater creater);$/;"	m	interface:CX.Obj.IObjectPool
+RegCreater	./Cx/Service/GameObject/ObjectPool.cs	/^		public void RegCreater (PooledObjectCreater creater)$/;"	m	class:CX.Obj.ObjectPool
+RemoveObserver	./Cx/Service/IObservable.cs	/^		void RemoveObserver(IObserver observer);$/;"	m	interface:CX.IObservable
+ResPath	./Cx/U3D/GameObjectBornVO.cs	/^		public string ResPath$/;"	p	class:CX.U3D.GameObjectBornVO
+Restart	./Cx/U3D/GameFlowController.cs	/^	public void Restart()$/;"	m	class:GameFlowController
+Restart	./Cx/U3D/IGameFlow.cs	/^	void Restart();$/;"	m	interface:IGameFlow
+Resume	./Cx/U3D/GameFlowController.cs	/^	public void Resume()$/;"	m	class:GameFlowController
+Resume	./Cx/U3D/IGameFlow.cs	/^	void Resume();$/;"	m	interface:IGameFlow
+Rotation	./Cx/U3D/GameObjectBornVO.cs	/^		public virtual Quaternion Rotation$/;"	p	class:CX.U3D.GameObjectBornVO
+Scale	./Cx/U3D/GameObjectBornVO.cs	/^		public virtual Vector3 Scale$/;"	p	class:CX.U3D.GameObjectBornVO
+Scale	./Game/Character/Blocker/BlockBornVO.cs	/^		public override Vector3 Scale $/;"	p	class:Game.BlockBornVO
+SetPauseText	./Presenter/InGameViewPresenter.cs	/^		void SetPauseText ()$/;"	m	class:Game.View.InGameViewPresenter	file:
+Show	./Cx/Service/Views/IView.cs	/^		void Show(bool isShow);$/;"	m	interface:CX.MVP.View.IView
+Show	./Cx/Service/Views/ViewBase.cs	/^		public virtual void Show(bool isShow)$/;"	m	class:CX.MVP.View.ViewBase
+Show	./Cx/Service/Views/ViewManagerBase.cs	/^			public void Show(bool isShow)$/;"	m	class:CX.MVP.View.ViewManagerBase.NullView
+Show	./Cx/U3D/U3DView.cs	/^		public virtual void Show(bool isShow)$/;"	m	class:CX.U3D.MVP.View.U3DView
+Spawn	./Game/ObjectSpawner.cs	/^	void Spawn()$/;"	m	class:ObjectSpawner	file:
+Start	./Cx/U3D/GameFlowController.cs	/^	public void Start()$/;"	m	class:GameFlowController
+Start	./Cx/U3D/IGameFlow.cs	/^	void Start();$/;"	m	interface:IGameFlow
+Start	./Cx/U3D/U3DView.cs	/^		protected virtual void Start()$/;"	m	class:CX.U3D.MVP.View.U3DView
+Start	./Game/Character/MainCharacter/CharacterMotor.cs	/^		void Start () {$/;"	m	class:Game.Character.CharacterMotor	file:
+StartGame	./Game/GameFacade.cs	/^        public void StartGame()$/;"	m	class:Game.GameFacade
+StartGenerate	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		public virtual void StartGenerate()$/;"	m	class:CX.Obj.PooledObjectCreater
+StartMove	./Cx/Service/GameObject/IMovable.cs	/^		void StartMove();$/;"	m	interface:CX.Obj.IMovable
+StartMove	./Game/TransformMover.cs	/^		public void StartMove()$/;"	m	class:Level.TransformMover
+StartSpawn	./Game/ObjectSpawner.cs	/^	public void StartSpawn(IObjectPool pool, Type bornType)$/;"	m	class:ObjectSpawner
+Stop	./Cx/U3D/GameFlowController.cs	/^	public void Stop()$/;"	m	class:GameFlowController
+Stop	./Cx/U3D/IGameFlow.cs	/^	void Stop();$/;"	m	interface:IGameFlow
+StopMove	./Cx/Service/GameObject/IMovable.cs	/^		void StopMove();$/;"	m	interface:CX.Obj.IMovable
+StopMove	./Game/TransformMover.cs	/^		public void StopMove()$/;"	m	class:Level.TransformMover
+StopSpawn	./Game/ObjectSpawner.cs	/^	public void StopSpawn()$/;"	m	class:ObjectSpawner
+ToString	./Cx/Service/GameObject/ObjectPool.cs	/^			public override string ToString ()$/;"	m	class:CX.Obj.ObjectPool.EmptyObject
+ToString	./Cx/Service/Views/ViewManagerBase.cs	/^			public override string ToString()$/;"	m	class:CX.MVP.View.ViewManagerBase.NullView
+TransformMover	./Game/TransformMover.cs	/^	public class TransformMover : MonoBehaviour, IMovable$/;"	c	namespace:Level
+U3DGameObjectView	./Cx/U3D/U3DGameObjectView.cs	/^	public class U3DGameObjectView : MonoBehaviour, IGameObjectView$/;"	c	namespace:CX.U3D
+U3DObjectCreater	./Cx/U3D/U3DObjectCreater.cs	/^	public class U3DObjectCreater : ObjectCreater$/;"	c	namespace:CX.U3D
+U3DPooledObjectCreater	./Cx/U3D/U3DPooledObjectCreater.cs	/^		public U3DPooledObjectCreater (GameObjectBornVO bornVO) : base (bornVO)$/;"	m	class:CX.U3D.U3DPooledObjectCreater
+U3DPooledObjectCreater	./Cx/U3D/U3DPooledObjectCreater.cs	/^	public class U3DPooledObjectCreater : PooledObjectCreater$/;"	c	namespace:CX.U3D
+U3DView	./Cx/U3D/U3DView.cs	/^	public class U3DView : MonoBehaviour, IView$/;"	c	namespace:CX.U3D.MVP.View
+U3DViewManager	./Cx/U3D/U3DViewManager.cs	/^		public U3DViewManager ()$/;"	m	class:CX.U3D.MVP.View.U3DViewManager
+U3DViewManager	./Cx/U3D/U3DViewManager.cs	/^	public class U3DViewManager : IViewManager$/;"	c	namespace:CX.U3D.MVP.View
+UpBlockBornVO	./Game/Character/Blocker/BlockBornVO.cs	/^		public UpBlockBornVO ()$/;"	m	class:Game.UpBlockBornVO
+UpBlockBornVO	./Game/Character/Blocker/BlockBornVO.cs	/^	public class UpBlockBornVO : BlockBornVO$/;"	c	namespace:Game
+Update	./Game/TransformMover.cs	/^		void Update()$/;"	m	class:Level.TransformMover	file:
+View	./Cx/Service/Character/CharacterBase.cs	/^		public virtual ICharacterView View$/;"	p	class:CX.Character.CharacterBase
+View	./Cx/Service/Character/ICharacter.cs	/^		new ICharacterView View { get; set; }$/;"	p	interface:CX.Character.ICharacter
+View	./Cx/Service/GameObject/IGameObject.cs	/^		IGameObjectView View { get; set; }$/;"	p	interface:CX.Obj.IGameObject
+View	./Cx/Service/GameObject/ObjectPool.cs	/^			public IGameObjectView View$/;"	p	class:CX.Obj.ObjectPool.EmptyObject
+View	./Cx/Service/Presenter/IPresenter.cs	/^		IView View { get; set; }$/;"	p	interface:CX.MVP.Presenter.IPresenter
+View	./Cx/Service/Presenter/IPresenterGeneric.cs	/^		new TView View { get; set; }$/;"	p	interface:CX.MVP.Presenter.IPresenter
+View	./Cx/Service/Presenter/PresenterBase.cs	/^		public virtual IView View$/;"	p	class:CX.MVP.Presenter.PresenterBase
+View	./Cx/Service/Presenter/PresenterBaseGeneric.cs	/^		public virtual TView View$/;"	p	class:CX.MVP.Presenter.PresenterBase
+View	./Cx/U3D/CxObj/CxGameObject.cs	/^		public IGameObjectView View$/;"	p	class:CX.U3D.Obj.CxGameObject
+ViewBase	./Cx/Service/Views/ViewBase.cs	/^	public abstract class ViewBase : IView$/;"	c	namespace:CX.MVP.View
+ViewFlow	./Cx/Service/Presenter/IViewNavable.cs	/^		IViewFlow ViewFlow $/;"	p	interface:CX.MVP.Presenter.IViewNavable
+ViewFlow	./Cx/Service/Presenter/NavPresenter.cs	/^		public IViewFlow ViewFlow $/;"	p	class:CX.MVP.Presenter.NavPresenter
+ViewFlow	./Cx/Service/Presenter/NavPresenterGeneric.cs	/^		public IViewFlow ViewFlow $/;"	p	class:CX.MVP.Presenter.NavPresenter
+ViewFlow	./Cx/Service/Views/IViewManager.cs	/^		IViewFlow ViewFlow { get; }$/;"	p	interface:CX.MVP.View.IViewManager
+ViewFlow	./Cx/Service/Views/ViewFlow.cs	/^		public ViewFlow (IViewManager viewMgr)$/;"	m	class:CX.MVP.View.ViewFlow
+ViewFlow	./Cx/Service/Views/ViewFlow.cs	/^	public class ViewFlow : IViewFlow$/;"	c	namespace:CX.MVP.View
+ViewFlow	./Cx/U3D/U3DViewManager.cs	/^		public IViewFlow ViewFlow $/;"	p	class:CX.U3D.MVP.View.U3DViewManager
+ViewFlow	./Game/GameFacade.cs	/^		public static IViewFlow ViewFlow;$/;"	f	class:Game.GameFacade
+ViewLoader	./Game/ViewLoader.cs	/^		public ViewLoader(IViewManager viewMgr)$/;"	m	class:Game.ViewLoader
+ViewLoader	./Game/ViewLoader.cs	/^	public class ViewLoader$/;"	c	namespace:Game
+ViewManagerBase	./Cx/Service/Views/ViewManagerBase.cs	/^	public abstract class ViewManagerBase $/;"	c	namespace:CX.MVP.View
+ViewName	./Cx/Service/Views/IView.cs	/^		string ViewName { get; set; }$/;"	p	interface:CX.MVP.View.IView
+ViewName	./Cx/Service/Views/ViewBase.cs	/^		public string ViewName$/;"	p	class:CX.MVP.View.ViewBase
+ViewName	./Cx/Service/Views/ViewManagerBase.cs	/^			public string ViewName$/;"	p	class:CX.MVP.View.ViewManagerBase.NullView
+ViewName	./Cx/U3D/U3DView.cs	/^		public string ViewName$/;"	p	class:CX.U3D.MVP.View.U3DView
+WELCOME	./Config/LevelConfig.cs	/^	public const string WELCOME = "Welcome";$/;"	f	class:LevelConfig
+WelcomeView	./View/WelcomeView.cs	/^	public class WelcomeView : U3DView, IWelcomeView {$/;"	c	namespace:Game.View
+WelcomeViewPresenter	./Presenter/WelcomeViewPresenter.cs	/^		public WelcomeViewPresenter()$/;"	m	class:Game.View.WelcomeViewPresenter
+WelcomeViewPresenter	./Presenter/WelcomeViewPresenter.cs	/^	public class WelcomeViewPresenter : NavPresenter<IWelcomeView>$/;"	c	namespace:Game.View
+bornCount	./Cx/Service/GameObject/BornVO.cs	/^		private int bornCount = 1;$/;"	f	class:CX.Obj.BornVO	file:
+bornType	./Game/ObjectSpawner.cs	/^	Type bornType;$/;"	f	class:ObjectSpawner	file:
+bornVO	./Cx/Service/CxObj/CxObjectGeneric.cs	/^		private T bornVO;$/;"	f	class:CX.Obj.CxObject	file:
+bornVO	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		protected BornVO bornVO;$/;"	f	class:CX.Obj.PooledObjectCreater
+bornVO	./Cx/U3D/CxObj/CxGameObject.cs	/^		private GameObjectBornVO bornVO;$/;"	f	class:CX.U3D.Obj.CxGameObject	file:
+character	./Game/Character/MainCharacter/CharacterMotor.cs	/^		public CharacterController character;$/;"	f	class:Game.Character.CharacterMotor
+createType	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		Type createType;$/;"	f	class:CX.Obj.PooledObjectCreater	file:
+createVOType	./Cx/Service/Character/CharacterBase.cs	/^		private Type createVOType;$/;"	f	class:CX.Character.CharacterBase	file:
+creater	./Cx/U3D/CxObj/CxGameObject.cs	/^		private ObjectCreater creater;$/;"	f	class:CX.U3D.Obj.CxGameObject	file:
+creater	./Cx/U3D/U3DPooledObjectCreater.cs	/^		U3DObjectCreater creater;$/;"	f	class:CX.U3D.U3DPooledObjectCreater	file:
+dontDestroy	./Util/DontDestroy.cs	/^	public GameObject dontDestroy;$/;"	f	class:DontDestroy
+downSpeed	./Game/Character/MainCharacter/CharacterMotor.cs	/^		public float downSpeed = 5;$/;"	f	class:Game.Character.CharacterMotor
+empty	./Cx/Service/GameObject/ObjectPool.cs	/^		public static readonly EmptyObject empty = new EmptyObject();$/;"	f	class:CX.Obj.ObjectPool
+exitBtn	./View/GameOverView.cs	/^		public Button exitBtn;$/;"	f	class:Game.View.GameOverView
+forwardSpeed	./Game/Character/MainCharacter/CharacterMotor.cs	/^		public float forwardSpeed = 5;$/;"	f	class:Game.Character.CharacterMotor
+gameFlow	./Presenter/InGameViewPresenter.cs	/^		IGameFlow gameFlow;$/;"	f	class:Game.View.InGameViewPresenter	file:
+gameFlow	./Presenter/WelcomeViewPresenter.cs	/^		private IGameFlow gameFlow;$/;"	f	class:Game.View.WelcomeViewPresenter	file:
+gameObjects	./Cx/Service/GameObject/PooledObjectCreater.cs	/^		Stack<IGameObject> gameObjects;$/;"	f	class:CX.Obj.PooledObjectCreater	file:
+gameOverPresnter	./View/GameOverView.cs	/^		GameOverViewPresenter gameOverPresnter;$/;"	f	class:Game.View.GameOverView	file:
+health	./Game/Character/CharacterHealth.cs	/^		private float health;$/;"	f	class:Game.Character.CharacterHealth	file:
+hostObject	./Cx/U3D/U3DGameObjectView.cs	/^		private IGameObject hostObject;$/;"	f	class:CX.U3D.U3DGameObjectView	file:
+isMoving	./Game/TransformMover.cs	/^		private bool isMoving;$/;"	f	class:Level.TransformMover	file:
+isPause	./Presenter/InGameViewPresenter.cs	/^		bool isPause;$/;"	f	class:Game.View.InGameViewPresenter	file:
+isUp	./Game/Character/MainCharacter/CharacterMotor.cs	/^		bool isUp;$/;"	f	class:Game.Character.CharacterMotor	file:
+life	./Cx/Service/Character/CharacterBase.cs	/^		private ICharacterLifeCyle life;$/;"	f	class:CX.Character.CharacterBase	file:
+moveSpeed	./Game/TransformMover.cs	/^		public Vector3 moveSpeed;$/;"	f	class:Level.TransformMover
+mover	./Game/TransformMover.cs	/^		public Transform mover;$/;"	f	class:Level.TransformMover
+objectPool	./Cx/U3D/GameFlowController.cs	/^	IObjectPool objectPool = GameFacade.ObjectPool;$/;"	f	class:GameFlowController	file:
+objectType	./Cx/Service/GameObject/BornVO.cs	/^		private string objectType;$/;"	f	class:CX.Obj.BornVO	file:
+pausBtnText	./View/InGameView.cs	/^		private Text pausBtnText;$/;"	f	class:Game.View.InGameView	file:
+pauseBtn	./View/InGameView.cs	/^		public Button pauseBtn;$/;"	f	class:Game.View.InGameView
+pool	./Game/ObjectSpawner.cs	/^	IObjectPool pool;$/;"	f	class:ObjectSpawner	file:
+pools	./Cx/Service/GameObject/ObjectPool.cs	/^		IDictionary<Type, PooledObjectCreater> pools;$/;"	f	class:CX.Obj.ObjectPool	file:
+position	./Cx/U3D/GameObjectBornVO.cs	/^		private Vector3 position;$/;"	f	class:CX.U3D.GameObjectBornVO	file:
+presenter	./Cx/Service/Views/ViewBase.cs	/^		IPresenter presenter;$/;"	f	class:CX.MVP.View.ViewBase	file:
+presenter	./Cx/U3D/U3DView.cs	/^		IPresenter presenter;$/;"	f	class:CX.U3D.MVP.View.U3DView	file:
+res	./Cx/U3D/U3DObjectCreater.cs	/^		Object res;$/;"	f	class:CX.U3D.U3DObjectCreater	file:
+resPath	./Cx/U3D/GameObjectBornVO.cs	/^		private string resPath;$/;"	f	class:CX.U3D.GameObjectBornVO	file:
+restartBtn	./View/GameOverView.cs	/^		public Button restartBtn;$/;"	f	class:Game.View.GameOverView
+rotation	./Cx/U3D/GameObjectBornVO.cs	/^		private Quaternion rotation = Quaternion.identity;$/;"	f	class:CX.U3D.GameObjectBornVO	file:
+scale	./Cx/U3D/GameObjectBornVO.cs	/^		private Vector3 scale = Vector3.one;$/;"	f	class:CX.U3D.GameObjectBornVO	file:
+score	./Model/GameScore.cs	/^        private int score;$/;"	f	class:Model.GameScore	file:
+startGameBtn	./View/WelcomeView.cs	/^		public Button startGameBtn;$/;"	f	class:Game.View.WelcomeView
+toDestroy	./Game/DestroyOutOfCamera.cs	/^	public GameObject toDestroy;$/;"	f	class:DestroyOutOfCamera
+uiCanvas	./Game/ViewLoader.cs	/^		Canvas uiCanvas;$/;"	f	class:Game.ViewLoader	file:
+uiRoot	./Game/ViewLoader.cs	/^		GameObject uiRoot;$/;"	f	class:Game.ViewLoader	file:
+upSpeed	./Game/Character/MainCharacter/CharacterMotor.cs	/^		public float upSpeed = 5;$/;"	f	class:Game.Character.CharacterMotor
+upStarTime	./Game/Character/MainCharacter/CharacterMotor.cs	/^		float upStarTime;$/;"	f	class:Game.Character.CharacterMotor	file:
+upTime	./Game/Character/MainCharacter/CharacterMotor.cs	/^		public float upTime = 0.5f;$/;"	f	class:Game.Character.CharacterMotor
+verticalSpeed	./Game/Character/MainCharacter/CharacterMotor.cs	/^		float verticalSpeed = 0;$/;"	f	class:Game.Character.CharacterMotor	file:
+view	./Cx/Service/Character/CharacterBase.cs	/^		private ICharacterView view;$/;"	f	class:CX.Character.CharacterBase	file:
+view	./Cx/Service/Presenter/PresenterBase.cs	/^		protected IView view;$/;"	f	class:CX.MVP.Presenter.PresenterBase
+view	./Cx/Service/Presenter/PresenterBaseGeneric.cs	/^		protected TView view;$/;"	f	class:CX.MVP.Presenter.PresenterBase
+viewDic	./Cx/U3D/U3DViewManager.cs	/^		IDictionary<string, IView> viewDic;$/;"	f	class:CX.U3D.MVP.View.U3DViewManager	file:
+viewFlow	./Cx/Service/Presenter/NavPresenter.cs	/^		IViewFlow viewFlow;$/;"	f	class:CX.MVP.Presenter.NavPresenter	file:
+viewFlow	./Cx/Service/Presenter/NavPresenterGeneric.cs	/^		IViewFlow viewFlow;$/;"	f	class:CX.MVP.Presenter.NavPresenter	file:
+viewFlow	./Cx/U3D/U3DViewManager.cs	/^		IViewFlow viewFlow;$/;"	f	class:CX.U3D.MVP.View.U3DViewManager	file:
+viewLoader	./Game/GameFacade.cs	/^        private ViewLoader viewLoader;$/;"	f	class:Game.GameFacade	file:
+viewMgr	./Cx/Service/Views/ViewFlow.cs	/^		IViewManager viewMgr;$/;"	f	class:CX.MVP.View.ViewFlow	file:
+viewMgr	./Game/GameFacade.cs	/^		private IViewManager viewMgr;$/;"	f	class:Game.GameFacade	file:
+viewMgr	./Game/ViewLoader.cs	/^		IViewManager viewMgr;$/;"	f	class:Game.ViewLoader	file:
+viewName	./Cx/Service/Views/ViewBase.cs	/^		string viewName;$/;"	f	class:CX.MVP.View.ViewBase	file:
+viewName	./Cx/U3D/U3DView.cs	/^		string viewName;$/;"	f	class:CX.U3D.MVP.View.U3DView	file:
+viewTypeDic	./Cx/U3D/U3DViewManager.cs	/^		IDictionary<Type, IView> viewTypeDic;$/;"	f	class:CX.U3D.MVP.View.U3DViewManager	file:
+views	./Cx/Service/Views/ViewFlow.cs	/^		Stack<IView> views = new Stack<IView>();$/;"	f	class:CX.MVP.View.ViewFlow	file:
