@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using Level;
 using CX.Obj;
+using Game;
 
 namespace Level
 {
@@ -13,6 +14,11 @@ namespace Level
 		void Awake()
 		{
 			if (mover == null) mover = transform;
+
+			//GameFacade.GameFlow.GameStart += (sender, e) => StartMove();
+			GameFacade.GameFlow.GameResume += (sender, e) => StartMove();
+			GameFacade.GameFlow.GamePause += (sender, e) => StopMove();
+			GameFacade.GameFlow.GameStop += (sender, e) => StopMove();
 			isMoving = true;
 		}
 

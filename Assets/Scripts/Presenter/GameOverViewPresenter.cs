@@ -5,18 +5,16 @@ namespace Game.View
 {
 	public class GameOverViewPresenter : NavPresenter<IGameOverView>
 	{
-		void Init()
+		protected override void InitializeView ()
 		{
-			view.OnReStartGameClick += HandleOnReStartGameClick;
-			view.OnExitClick += HandleOnExitClick;
-		}
-
-		void HandleOnReStartGameClick (object sender, System.EventArgs e)
-		{
-		}
-
-		void HandleOnExitClick (object sender, System.EventArgs e)
-		{
+			view.OnReStartGameClick.AddListener(delegate {
+				GameFacade.GameFlow.Resume();
+				NavTo("InGameView");
+			});
+			view.OnExitClick.AddListener(delegate {
+				GameFacade.GameFlow.Exit();
+				NavTo("WelcomeView");
+			});
 		}
 	}
 }

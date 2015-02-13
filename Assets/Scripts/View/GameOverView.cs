@@ -14,27 +14,25 @@ namespace Game.View
 
 		void Awake()
 		{
-			RegBtnEvent(restartBtn, OnReStartGameClick);
-			RegBtnEvent(exitBtn, OnExitClick);
+			restartBtn.onClick = new Button.ButtonClickedEvent();
+			exitBtn.onClick = new Button.ButtonClickedEvent();
 		}
 
-		void RegBtnEvent(Button btn, EventHandler eventHandler)
+		public Button.ButtonClickedEvent OnReStartGameClick
 		{
-			RegBtnEvent(btn, eventHandler, this, EventArgs.Empty);
+			get
+			{
+				return restartBtn.onClick;
+			}
 		}
 
-		void RegBtnEvent(Button btn, EventHandler eventHandler, object sender, EventArgs e)
+		public Button.ButtonClickedEvent OnExitClick
 		{
-			btn.onClick = new Button.ButtonClickedEvent();
-			btn.onClick.AddListener(delegate() {
-				if (eventHandler != null)
-					eventHandler(sender, e);
-			});
+			get
+			{
+				return exitBtn.onClick;
+			}
 		}
-
-		public event EventHandler OnReStartGameClick;
-
-		public event EventHandler OnExitClick;
 	}
 }
 

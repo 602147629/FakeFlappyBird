@@ -1,8 +1,22 @@
 /// <summary>
 /// Game flow. Controll game while playing level.
 /// </summary>
+using System;
+
 public interface IGameFlow
 {
+	event EventHandler GameStart;
+
+	event EventHandler GameRestart;
+
+	event EventHandler GamePause;
+
+	event EventHandler GameResume;
+
+	event EventHandler GameStop;
+
+	event EventHandler GameExit;
+
 	/// <summary>
 	/// Start Game.
 	/// </summary>
@@ -27,4 +41,9 @@ public interface IGameFlow
 	/// Stop Game.
 	/// </summary>
 	void Stop();
+
+	/// <summary>
+	/// Exit Game
+	/// </summary>
+	void Exit();
 }

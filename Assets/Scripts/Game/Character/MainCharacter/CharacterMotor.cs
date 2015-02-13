@@ -13,13 +13,30 @@ namespace Game.Character
 		float verticalSpeed = 0;
 		float upStarTime;
 		bool isUp;
+		bool isStop;
 		
 		void Start () {
-			if (character == null) character = GetComponent<CharacterController>();	
+			if (character == null) character = GetComponent<CharacterController>();
+
+			GameFacade.GameFlow.GameResume += (sender, e) => GameStart();
+			GameFacade.GameFlow.GamePause += (sender, e) => GameStop();
+			GameFacade.GameFlow.GameStop += (sender, e) => GameStop();
+		}
+
+		void GameStart ()
+		{
+			isStop = false;
+		}
+
+		void GameStop ()
+		{
+			isStop = true;
 		}
 		
 		void FixedUpdate()
 		{
+			if (isStop) return;
+
 			if (Input.GetKeyDown(KeyCode.W))
 			{
 				upStarTime = Time.time;

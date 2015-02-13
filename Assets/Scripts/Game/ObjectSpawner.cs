@@ -2,29 +2,42 @@ using UnityEngine;
 using CX.Obj;
 using System;
 using System.Collections;
+using Game;
 
-public class ObjectSpawner : MonoBehaviour
+public class ObjectSpawner<T>
 {
 	bool isSpawn;
+	IObjectPool<T> pool;
+	MonoBehaviour _m;
 
-	public void StartSpawn<T>(IObjectPool<T> pool)
+	public ObjectSpawner(IObjectPool<T> pool)
 	{
-		isSpawn = true;
-		StartCoroutine(Spwan<T>(pool));
+		this.pool = pool;
+		_m = new GameObject ().AddComponent<MonoBehaviour>();
+
+		GameFacade.GameFlow.GamePause += (sender, e) => StopSpawn();
+		GameFacade.GameFlow.GameResume += (sender, e) => StartSpawn();
+		GameFacade.GameFlow.GameStop += (sender, e) => StopSpawn();
 	}
 
-	IEnumerator Spwan<T>(IObjectPool<T> pool)
+	public void StartSpawn()
+	{
+		isSpawn = true;
+		_m.StartCoroutine(Spwan());
+	}
+
+	IEnumerator Spwan()
 	{
 		while (isSpawn)
 		{
 			T obj = pool.GetOne();
-			StartCoroutine(PutBack<T>(pool, obj));
+			_m.StartCoroutine(PutBack(obj));
 			yield return new WaitForSeconds(1);
 		}
 		yield return null;
 	}
 
-	IEnumerator PutBack<T>(IObjectPool<T> pool, T obj)
+	IEnumerator PutBack(T obj)
 	{
 		yield return new WaitForSeconds(15);
 		pool.PutBack(obj);
@@ -33,5 +46,6 @@ public class ObjectSpawner : MonoBehaviour
 	public void StopSpawn()
 	{
 		isSpawn = false;
+		_m.StopAllCoroutines();
 	}
 }

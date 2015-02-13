@@ -7,7 +7,7 @@ namespace Game.View
 	{
 		public InGameViewPresenter ()
 		{
-			gameFlow = new GameFlowController();
+			gameFlow = GameFacade.GameFlow ;
 		}
 
 		protected override void InitializeView()

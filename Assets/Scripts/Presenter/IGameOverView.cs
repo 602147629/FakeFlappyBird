@@ -1,10 +1,12 @@
 using System;
+using UnityEngine.UI;
+
 namespace Game.View
 {
 	public interface IGameOverView
 	{
-		event EventHandler OnReStartGameClick;
-		event EventHandler OnExitClick;
+		Button.ButtonClickedEvent OnReStartGameClick { get; }
+		Button.ButtonClickedEvent OnExitClick { get; }
 	}
 }
 
