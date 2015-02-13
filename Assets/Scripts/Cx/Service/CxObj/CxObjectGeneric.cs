@@ -3,7 +3,7 @@ namespace CX.Obj
 {
 	public abstract class CxObject<T> : ICxObject
 	{
-		private T bornVO;
+		protected T bornVO;
 
 		protected CxObject(T bornVO)
 		{

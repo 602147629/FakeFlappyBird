@@ -41,7 +41,7 @@ namespace CX.Obj
 			for (int i = 0; i < count; i++)
 			{
 				var obj = GenerateOne ();
-				obj.CreateVOType = CreateType;
+				//obj.CreateVOType = CreateType;
 				Push (obj);
 			}
 		}

@@ -28,6 +28,7 @@ namespace CX.Obj
 		protected virtual void CreatePoolObj()
 		{
 			var obj = pooledObj.Make ();
+			pooledObj.InAactive(obj);
 			queues.Enqueue (obj);
 		}
 

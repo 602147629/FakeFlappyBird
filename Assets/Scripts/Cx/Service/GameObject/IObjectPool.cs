@@ -1,4 +1,4 @@
-using System;
+/*using System;
 
 namespace CX.Obj
 {
@@ -34,4 +34,4 @@ namespace CX.Obj
 		void ClearAllInPool();
 	}
 }
-
+*/

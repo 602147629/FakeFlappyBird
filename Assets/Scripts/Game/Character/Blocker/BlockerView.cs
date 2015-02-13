@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using CX.U3D.Character;
+using CX.U3D;
 using System.Collections;
 
 namespace Game.Character
 {
-	public class BlockerView : CharacterView 
+	public class BlockerView :  U3DGameObjectView
 	{		
 		// Use this for initialization
 		void OnEnable () 
@@ -12,12 +13,6 @@ namespace Game.Character
 			//StartCoroutine(BecomeInvisible());
 		}	
 
-
-		IEnumerator BecomeInvisible()
-		{
-			yield return new WaitForSeconds(5);
-			GameFacade.ObjectPool.PutBack(Character);
-		}
 	}
 }
 

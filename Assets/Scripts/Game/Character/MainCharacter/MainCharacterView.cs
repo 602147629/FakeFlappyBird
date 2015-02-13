@@ -1,19 +1,18 @@
 using UnityEngine;
 using CX.U3D.Character;
+using CX.Character;
+using CX.U3D;
 
 namespace Game.Character
 {
-	public class MainCharacterView : CharacterView
+	public class MainCharacterView : U3DGameObjectView
 	{
 		void OnTriggerEnter(Collider other) 
 		{
 			if (other.tag == "Blocker")
 			{
-				Character.Life.Dead();
+				(HostObject as ICharacter).Life.Dead();
 			}
 		}
 	}
 }
-
-
-

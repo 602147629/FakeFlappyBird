@@ -14,15 +14,12 @@ namespace Game
 
 		public static IViewFlow ViewFlow;
 
-		public static IObjectPool ObjectPool;
-
 		private IViewManager viewMgr;
 
         public GameFacade()
         {
 			InitGame();
 			InitView();
-			ObjectPool = new ObjectPool();
         }
 
 		private void InitGame()

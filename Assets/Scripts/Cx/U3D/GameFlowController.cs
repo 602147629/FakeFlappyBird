@@ -24,6 +24,8 @@ public class GameFlowController : IGameFlow
 			new GameObject().AddComponent<ObjectSpawner>().StartSpawn(pool2);
 			//var createMain = new U3DObjectCreater();
 			//createMain.Create(new MainCharacterBornVO());
+
+			MainCharacter m = new MainCharacter(new MainCharacterBornVO());
 		});
 	}
 

@@ -12,8 +12,6 @@ namespace CX.Character
 		/// </summary>
 		/// <value>The life.</value>
 		ICharacterLifeCyle Life { get; set; }
-
-		new ICharacterView View { get; set; }
 	}
 }
 

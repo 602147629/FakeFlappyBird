@@ -12,8 +12,7 @@ namespace GameTest
 {
 	public class CharacterTest
 	{
-		ICharacter character;
-		
+
 		
 		[SetUp]
 		public void SetUp()
@@ -24,13 +23,11 @@ namespace GameTest
 		[Test]
 		public void TestDead()
 		{
-			character.Life.Dead();
 		}
 		
 		[TearDown]
 		public void TearDown()
 		{
-			character.View.Destroy();
 		}
 	}
 
