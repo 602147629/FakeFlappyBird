@@ -2,7 +2,7 @@ using CX.Obj;
 
 namespace CX.U3D.Obj
 {
-	public class CxGameObjectPooled : IPooledObject<CxGameObject>
+	public class CxGameObjectPooled<T> : IPooledObject<T> where T : CxGameObject
 	{
 		BornVO bornVO;
 
@@ -11,27 +11,26 @@ namespace CX.U3D.Obj
 			this.bornVO = bornVO;
 		}
 
-		public CxGameObject Make()
+		public T Make()
 		{
-			return CreateHelper.Create<CxGameObject>(bornVO.ObjectType, bornVO);
+			return CreateHelper.Create<T>(bornVO.ObjectType, bornVO);
 		}
 
-		public void Active(CxGameObject obj)
+		public void Active(T obj)
 		{
 			obj.Create();
 		}
 
-		public void InAactive(CxGameObject obj)
+		public void InAactive(T obj)
 		{
 			obj.Destroy();
 		}
 
-		public void Destroy(CxGameObject obj)
+		public void Destroy(T obj)
 		{
-			//throw new System.NotImplementedException();
 		}
 
-		public bool Validate(CxGameObject obj)
+		public bool Validate(T obj)
 		{
 			return true;
 		}

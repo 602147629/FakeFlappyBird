@@ -22,6 +22,8 @@ namespace CX.U3D.Obj
 			u3dView = ins.GetComponent<U3DGameObjectView>();
 			if (u3dView == null) u3dView = ins.AddComponent<U3DGameObjectView>();
 			View = u3dView as IGameObjectView;
+
+			Destroy();
 		}
 
 		public virtual void Create()

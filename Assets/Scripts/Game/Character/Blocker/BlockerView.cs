@@ -9,7 +9,7 @@ namespace Game.Character
 		// Use this for initialization
 		void OnEnable () 
 		{
-			StartCoroutine(BecomeInvisible());
+			//StartCoroutine(BecomeInvisible());
 		}	
 
 

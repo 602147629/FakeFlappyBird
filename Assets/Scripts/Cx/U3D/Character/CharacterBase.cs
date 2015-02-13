@@ -1,11 +1,18 @@
 using UnityEngine;
 using System;
 using CX.Obj;
+using CX.U3D.Obj;
+using CX.Character;
 
-namespace CX.Character
+namespace CX.U3D.Character
 {
-	public abstract class CharacterBase : ICharacter
+	public class CharacterBase : CxGameObject, ICharacter
 	{
+		public CharacterBase(GameObjectBornVO bornVO) : base (bornVO)
+		{
+
+		}
+
 		private ICharacterView view;
 		private ICharacterLifeCyle life;
 		private Type createVOType;
