@@ -28,7 +28,7 @@ namespace CX.Obj
 		protected virtual void CreatePoolObj()
 		{
 			var obj = pooledObj.Make ();
-			pooledObj.InAactive(obj);
+			pooledObj.InAactivate(obj);
 			queues.Enqueue (obj);
 		}
 
@@ -38,7 +38,7 @@ namespace CX.Obj
 			if (queues.Count > 0)
 			{
 				obj = queues.Dequeue ();
-				pooledObj.Active(obj);
+				pooledObj.Activate(obj);
 			}
 			else
 			{
@@ -50,7 +50,7 @@ namespace CX.Obj
 
 		public virtual void PutBack(T obj)
 		{
-			pooledObj.InAactive(obj);
+			pooledObj.InAactivate(obj);
 			queues.Enqueue(obj);
 		}
 

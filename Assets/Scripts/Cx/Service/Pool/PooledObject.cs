@@ -4,11 +4,11 @@ namespace CX.Obj
 	{
 		public abstract T Make();
 
-		public virtual void Active(T obj)
+		public virtual void Activate(T obj)
 		{
 		}
 
-		public virtual void InAactive(T obj)
+		public virtual void InAactivate(T obj)
 		{
 		}
 

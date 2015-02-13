@@ -16,12 +16,12 @@ namespace CX.U3D.Obj
 			return CreateHelper.Create<T>(bornVO.ObjectType, bornVO);
 		}
 
-		public void Active(T obj)
+		public void Activate(T obj)
 		{
 			obj.Create();
 		}
 
-		public void InAactive(T obj)
+		public void InAactivate(T obj)
 		{
 			obj.Destroy();
 		}

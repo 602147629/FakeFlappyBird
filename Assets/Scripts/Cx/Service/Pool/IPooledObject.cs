@@ -4,9 +4,9 @@ namespace CX.Obj
 	{
 		T Make();
 
-		void Active(T obj);
+		void Activate(T obj);
 
-		void InAactive(T obj);
+		void InAactivate(T obj);
 
 		void Destroy(T obj);
 
