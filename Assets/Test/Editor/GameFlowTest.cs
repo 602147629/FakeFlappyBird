@@ -3,27 +3,32 @@ using Game;
 using UnityEngine;
 using System;
 using Game.View;
+using CX.Obj;
 
 namespace GameTest
 {
 	[TestFixture]
 	public class GameFlowTest
 	{
-		IGameFlow gameFLow;
 
 		[SetUp]
 		public void SetUp()
 		{
-			gameFLow = new GameFlowController();
-			
+
 		}	
 
+		[Test]
+		public void LoadRes ()
+		{
+			CxObjContainer cx = new CxObjContainer ();
+			cx.AddObject (new MainCharacterBornVO ());
+		}
 		
 		[Test]
-		public void Start()
+		public void LoadNew()
 		{
-			gameFLow.Start();
-			
+			LoadRes ();
+			LevelLoader.LoadLevel(LevelConfig.EMPTY);
 		}
 		
 		

@@ -4,7 +4,7 @@ using System;
 
 namespace CX.U3D.Obj
 {
-	public class CxGameObject : ICxObject, IGameObject
+	public class CxGameObject : IActivable, IGameObject
 	{
 		private GameObjectBornVO bornVO;
 		private U3DGameObjectView u3dView;
@@ -25,7 +25,7 @@ namespace CX.U3D.Obj
 			View.HostObject = this;
 		}
 
-		public virtual void Create()
+		public virtual void Activate()
 		{
 			u3dView.transform.localPosition = bornVO.Position;
 			u3dView.transform.localScale = bornVO.Scale;
@@ -34,10 +34,15 @@ namespace CX.U3D.Obj
 			u3dView.gameObject.SetActive(true);
 		}
 
-		public virtual void Destroy()
+		public virtual void InActivate()
 		{
 			u3dView.gameObject.SetActive(false);
 			//View.Destroy();
+		}
+
+		public virtual void Destroy()
+		{
+			GameObject.Destroy(u3dView.gameObject);
 		}
 
 		public virtual IGameObjectView View

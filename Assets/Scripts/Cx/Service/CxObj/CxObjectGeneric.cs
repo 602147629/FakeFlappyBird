@@ -1,7 +1,7 @@
 using System;
 namespace CX.Obj
 {
-	public abstract class CxObject<T> : ICxObject
+	public abstract class CxObject<T> : IActivable
 	{
 		protected T bornVO;
 
@@ -10,9 +10,9 @@ namespace CX.Obj
 			this.bornVO = bornVO;
 		}
 
-		public abstract void Create();
+		public abstract void Activate();
 
-		public abstract void Destroy();
+		public abstract void InActivate();
 	}
 }
 

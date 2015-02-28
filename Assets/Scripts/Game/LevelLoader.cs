@@ -15,8 +15,13 @@ namespace Game
 
 		public static void LoadLevel(string levelName, Action loadCompleted)
 		{
-			Application.LoadLevel(levelName);
 			LoadCompleted = loadCompleted;
+			Load (levelName);
+		}
+
+		static void Load (string levelName)
+		{
+			Application.LoadLevel (levelName);
 		}
 
 		void OnLevelWasLoaded(int level) 
@@ -25,6 +30,7 @@ namespace Game
 			{
 				if (LoadCompleted != null)
 					LoadCompleted();
+				LoadCompleted = null;
 			}
 		}
 

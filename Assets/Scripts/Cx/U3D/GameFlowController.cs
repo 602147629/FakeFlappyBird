@@ -23,21 +23,28 @@ public class GameFlowController : IGameFlow
 
 	public event EventHandler GameExit;
 
+	//CxObjContainer objContainer = new CxObjContainer();
+
 	
 	public void Start()
 	{
 		LevelLoader.LoadLevel(LevelConfig.LEVEL, delegate() {
 
-			IObjectPool<BlockerCharacter> pool1 = new ObjectPool<BlockerCharacter>(new CxGameObjectPooled<BlockerCharacter>(new DownBlockBornVO()), 20);
-			IObjectPool<BlockerCharacter> pool2 = new ObjectPool<BlockerCharacter>(new CxGameObjectPooled<BlockerCharacter>(new UpBlockBornVO()), 20);
+			CxObjContainer objContainer = new CxObjContainer();
+			objContainer.AddObject(new MainCharacterBornVO());
+
+			IObjectPool<BlockerCharacter> pool1 = new ObjectPool<BlockerCharacter>(
+				new CxGameObjectPooled<BlockerCharacter>(new DownBlockBornVO(), objContainer), 20);
+			IObjectPool<BlockerCharacter> pool2 = new ObjectPool<BlockerCharacter>(
+				new CxGameObjectPooled<BlockerCharacter>(new UpBlockBornVO(), objContainer), 20);
 
 			new ObjectSpawner<BlockerCharacter>(pool1).StartSpawn();
 			new ObjectSpawner<BlockerCharacter>(pool2).StartSpawn();
 
-			MainCharacter m = new MainCharacter(new MainCharacterBornVO());
-
 			if (GameStart != null)
 				GameStart(this, EventArgs.Empty);
+
+
 		});
 	}
 
@@ -71,7 +78,17 @@ public class GameFlowController : IGameFlow
 	{
 		if (GameExit != null)
 			GameExit(this, EventArgs.Empty);
-		Application.LoadLevel("Empty");
-	}
 
+
+		GameStart = null;
+		GameStop = null;
+		GameResume = null;
+		GameRestart = null;
+		GameExit = null;
+		GamePause = null;
+
+
+		//objContainer.DestroyAll();
+		LevelLoader.LoadLevel(LevelConfig.EMPTY);
+	}
 }

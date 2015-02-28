@@ -1,6 +1,7 @@
 using System;
 using NUnit.Framework;
 using CX;
+using UnityEngine;
 
 namespace SimpleTest
 {
@@ -71,6 +72,50 @@ namespace SimpleTest
 
 		}
 
+		public delegate void Del();
+		public Del del;
+
+		static void StDel()
+		{
+			Debug.Log("C");
+		}
+
+		void InsDel()
+		{
+			Debug.Log("D");
+		}
+
+		[Test]
+		public void DelegateTest()
+		{
+			//del();
+			Del del = InsDel;
+			del += delegate() {
+				Debug.Log("A");
+			};
+			del += delegate() {
+				Debug.Log("B");
+			};
+
+			del();
+			del = InsDel;
+
+			del();
+			del += StDel;
+			del();
+
+
+		}
+
+	}
+
+	public class DelTest
+	{
+		public void D()
+		{
+			SimpleTest st = new SimpleTest();
+			st.del = null;
+		}
 	}
 }
 

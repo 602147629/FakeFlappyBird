@@ -9,7 +9,7 @@ namespace Game.View
 
 		public WelcomeViewPresenter()
 		{
-			gameFlow = new GameFlowController();
+			gameFlow = GameFacade.GameFlow;
 		}
 
 		protected override void InitializeView ()

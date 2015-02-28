@@ -24,7 +24,7 @@ namespace Game
 
 		private void InitGame()
 		{
-			GameFlow = new GameFlowController ();
+			GameFlow = new GameFlowController(); 
 		}
 
 		private void InitView()
