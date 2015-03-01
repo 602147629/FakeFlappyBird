@@ -5,7 +5,8 @@ namespace Game.View
 	public interface IInGameView
 	{
 		Button.ButtonClickedEvent OnPauseEvent { get; }
-		string PauseBtnText { get; set; }
+		string PauseBtnText { set; }
+		string CountDownText { set; }
 	}
 }
 

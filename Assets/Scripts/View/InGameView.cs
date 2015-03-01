@@ -7,6 +7,7 @@ namespace Game.View
 	{
 		public Button pauseBtn;
 		private Text pausBtnText;
+		public Text countDownText;
 
 		void Awake()
 		{
@@ -24,13 +25,17 @@ namespace Game.View
 
 		public string PauseBtnText
 		{
-			get
-			{
-				return pausBtnText.text;
-			}
 			set
 			{
 				pausBtnText.text = value;
+			}
+		}
+
+		public string CountDownText
+		{
+			set
+			{
+				countDownText.text = value;
 			}
 		}
 	}
