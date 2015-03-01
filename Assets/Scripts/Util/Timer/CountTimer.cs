@@ -15,10 +15,24 @@ public class CountTimer : Timer
 		get; set;
 	}
 
+	public event TimeElapsedEvent TimerInit;
+	public event TimeElapsedEvent FinalCount;
+
 	public override void Start ()
 	{
 		nowCount = 0;
+		if (TimerInit != null)
+			TimerInit(nowCount);
 		base.Start ();
+	}
+
+	protected override void Count ()
+	{
+		base.Count ();
+		if (FinalCount != null && nowCount == TotalCount)
+		{
+			FinalCount(nowCount);
+		}
 	}
 
 	public override bool IsEnabled

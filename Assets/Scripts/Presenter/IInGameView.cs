@@ -7,6 +7,7 @@ namespace Game.View
 		Button.ButtonClickedEvent OnPauseEvent { get; }
 		string PauseBtnText { set; }
 		string CountDownText { set; }
+		bool PasuBtnInterAct { set; }
 	}
 }
 

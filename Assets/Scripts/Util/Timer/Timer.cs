@@ -50,7 +50,7 @@ public class Timer
 			if (Elapsed != null)
 			{
 				nowCount ++;
-				Elapsed(nowCount);
+				Count();
 			}
 		}
 	}
@@ -58,6 +58,11 @@ public class Timer
 	public virtual bool IsEnabled
 	{
 		get { return isEnabled; }
+	}
+
+	protected virtual void Count()
+	{
+		Elapsed(nowCount);
 	}
 
 	private bool isEnabled;

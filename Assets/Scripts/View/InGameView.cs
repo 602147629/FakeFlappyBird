@@ -38,6 +38,14 @@ namespace Game.View
 				countDownText.text = value;
 			}
 		}
+
+		public bool PasuBtnInterAct
+		{
+			set
+			{
+				pauseBtn.interactable = value;
+			}
+		}
 	}
 }
 
