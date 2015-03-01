@@ -11,6 +11,20 @@ namespace Game.View
 		public InGameViewPresenter ()
 		{
 			gameFlow = GameFacade.GameFlow;
+			counter = new CountTimer(3);
+			counter.Elapsed += HandleElapsed;
+		}
+
+		void HandleElapsed (float nowCount)
+		{
+			var ct = counter.TotalCount - nowCount + 1;
+			SetCountDownText (ct.ToString());
+
+			if (counter.TotalCount == nowCount)
+			{
+				SetCountDownText("");
+				gameFlow.Resume();
+			}
 		}
 
 		protected override void InitializeView()
@@ -27,28 +41,10 @@ namespace Game.View
 			if (isPause) gameFlow.Pause();
 			else 
 			{
-				Coroutine.StartCoroutine(CountDown(3, 1, CountingAction));
+				counter.Start();
 			}
 		}
 
-		private void CountingAction(int count, int totalCount)
-		{
-			SetCountDownText ((totalCount - count).ToString());
-			if (totalCount == count + 1)
-			{
-				SetCountDownText("");
-				gameFlow.Resume();
-			}
-		}
-
-		IEnumerator CountDown(int totalCount, int count, Action<int, int> act)
-		{
-			for(int i = 0; i < totalCount; i ++)
-			{
-				act(i, totalCount);
-				yield return new WaitForSeconds(count);
-			}
-		}
 
 		void SetPauseText ()
 		{
@@ -62,17 +58,7 @@ namespace Game.View
 
 		bool isPause;
 		IGameFlow gameFlow;
-
-		MonoBehaviour coroutine;
-		MonoBehaviour Coroutine
-		{
-			get
-			{
-				if (coroutine == null)
-					coroutine = new GameObject().AddComponent<MonoBehaviour>();
-				return coroutine;
-			}
-		}
+		CountTimer counter;
 	}
 }
 
