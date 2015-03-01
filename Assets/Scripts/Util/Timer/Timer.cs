@@ -23,6 +23,7 @@ public class Timer
 
 	public virtual void Start()
 	{
+		Counter.StopAllCoroutines();
 		isEnabled = true;
 		Counter.StartCoroutine(Counting());
 	}
