@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using CX.Obj;
 
 public class Timer
 {
@@ -23,7 +24,6 @@ public class Timer
 
 	public virtual void Start()
 	{
-		Counter.StopAllCoroutines();
 		isEnabled = true;
 		Counter.StartCoroutine(Counting());
 	}
@@ -31,15 +31,19 @@ public class Timer
 	public virtual void Stop()
 	{
 		isEnabled = false;
+		Counter.StopAllCoroutines();
 	}
 
 	public virtual void Close()
 	{
-		isEnabled = false;
-		if (_counter != null)
-			GameObject.Destroy(_counter.gameObject);
+		Stop();
 		Elapsed = null;
-		_counter = null;
+		if (_counter != null)
+		{
+			//GameObject.Destroy(_counter.gameObject);
+			counterPools.PutBack(_counter);
+			_counter = null;
+		}
 	}
 
 	IEnumerator Counting()
@@ -74,8 +78,43 @@ public class Timer
 		get
 		{
 			if (_counter == null)
-				_counter = new GameObject().AddComponent<MonoBehaviour>();
+			{
+				_counter = counterPools.GetOne();
+			}
 			return _counter;
+		}
+	}
+
+	static IObjectPool<MonoBehaviour> counterPools = new ObjectPool<MonoBehaviour>(new PooledMono(), 35);
+
+	class PooledMono : IPooledObject<MonoBehaviour>
+	{
+		public MonoBehaviour Make()
+		{
+			var gameObject = new GameObject ("I am a timer");
+			gameObject.AddComponent<DontDestroy>();
+			var monoBehaviour = gameObject.AddComponent<MonoBehaviour> ();
+			return monoBehaviour;
+		}
+
+		public void Activate(MonoBehaviour obj)
+		{
+			obj.gameObject.SetActive(true);
+		}
+
+		public void InAactivate(MonoBehaviour obj)
+		{
+			obj.gameObject.SetActive(false);
+		}
+
+		public void Destroy(MonoBehaviour obj)
+		{
+			GameObject.Destroy(obj.gameObject);
+		}
+
+		public bool Validate(MonoBehaviour obj)
+		{
+			return true;
 		}
 	}
 }

@@ -15,6 +15,13 @@ public class CountTimer : Timer
 		get; set;
 	}
 
+	bool runOnce = true;
+	public bool RunOnce
+	{
+		set { runOnce = value; }
+		get { return runOnce; }
+	}
+
 	public event TimeElapsedEvent TimerInit;
 	public event TimeElapsedEvent TimerFinished;
 
@@ -29,7 +36,10 @@ public class CountTimer : Timer
 	protected override void Count ()
 	{
 		base.Count ();
-		if (TimerFinished != null && nowCount == TotalCount)
+		var last = nowCount == TotalCount;
+		if (last && runOnce)
+			Close();
+		if (TimerFinished != null && last)
 		{
 			TimerFinished(nowCount);
 		}
