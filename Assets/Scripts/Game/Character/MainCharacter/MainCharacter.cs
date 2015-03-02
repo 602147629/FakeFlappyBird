@@ -16,7 +16,6 @@ namespace Game.Character
 		{
 			public void Dead()
 			{
-				return;
 				GameFacade.ViewFlow.Forward("GameOverView");
 				GameFacade.GameFlow.Stop();
 			}
