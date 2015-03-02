@@ -13,7 +13,7 @@ namespace Game.View
 			gameFlow = GameFacade.GameFlow;
 			counter = new CountTimer(3);
 			counter.Elapsed += HandleElapsed;
-			counter.FinalCount += HandleFinalCount;
+			counter.TimerFinished += HandleFinalCount;
 			counter.TimerInit += HandleTimerInit;
 		}
 

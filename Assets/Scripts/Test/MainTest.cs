@@ -11,7 +11,19 @@ public class MainTest : MonoBehaviour {
 		//ct.TotalCount = 5;
 
 		ct.Elapsed += HandleElapsed;
-		ct.Start();
+		//ct.Start();
+
+		for (int i = 0; i < 1000; i ++)
+			StartCoroutine(E ());
+	}
+
+	IEnumerator E()
+	{
+		while (true)		
+		{
+			yield return new WaitForSeconds(1);
+			Debug.Log(Time.time);
+		}
 	}
 
 	void HandleElapsed (float nowCount)

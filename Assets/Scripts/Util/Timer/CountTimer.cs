@@ -16,7 +16,7 @@ public class CountTimer : Timer
 	}
 
 	public event TimeElapsedEvent TimerInit;
-	public event TimeElapsedEvent FinalCount;
+	public event TimeElapsedEvent TimerFinished;
 
 	public override void Start ()
 	{
@@ -29,9 +29,9 @@ public class CountTimer : Timer
 	protected override void Count ()
 	{
 		base.Count ();
-		if (FinalCount != null && nowCount == TotalCount)
+		if (TimerFinished != null && nowCount == TotalCount)
 		{
-			FinalCount(nowCount);
+			TimerFinished(nowCount);
 		}
 	}
 
