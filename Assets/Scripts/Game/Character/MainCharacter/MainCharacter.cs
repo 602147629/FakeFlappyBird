@@ -24,7 +24,9 @@ namespace Game.Character
 				lifeChange.AddListener(GameFacade.ViewMgr.GetView<Game.View.InGameView>().lifeChangeText);
 				lifeChange.Value = life;
 				invincibleTimer.RunOnce = false;
-				invincibleTimer.Elapsed += (nowCount) => Invincible = false; 
+				invincibleTimer.Elapsed += (nowCount) => Invincible = false;
+
+				GameFacade.GameFlow.GameRestart += (sender, e) => { Invincible = false; lifeChange.Value = life; };
 			}
 
 			public void Dead()

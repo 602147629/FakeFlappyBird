@@ -17,6 +17,7 @@ namespace Level
 
 			//GameFacade.GameFlow.GameStart += (sender, e) => StartMove();
 			GameFacade.GameFlow.GameResume += (sender, e) => StartMove();
+			GameFacade.GameFlow.GameRestart += (sender, e) => StartMove();
 			GameFacade.GameFlow.GamePause += (sender, e) => StopMove();
 			GameFacade.GameFlow.GameStop += (sender, e) => StopMove();
 			isMoving = true;

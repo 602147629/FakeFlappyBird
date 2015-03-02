@@ -9,6 +9,7 @@ public class ObjectSpawner<T>
 	IObjectPool<T> pool;
 	Timer spawnTimer;
 	IList<CountTimer> ptTimers = new List<CountTimer>();
+	IList<T> borns = new List<T>();
 
 	public ObjectSpawner(IObjectPool<T> pool)
 	{
@@ -19,16 +20,19 @@ public class ObjectSpawner<T>
 		GameFacade.GameFlow.GamePause += (sender, e) => StopSpawn();
 		GameFacade.GameFlow.GameResume += (sender, e) => StartSpawn();
 		GameFacade.GameFlow.GameStop += (sender, e) => StopSpawn();
+		GameFacade.GameFlow.GameRestart += (sender, e) => RestartSpawn();
 	}
 
 	void HandleSpawnElapsed (float nowCount)
 	{
 		T obj = pool.GetOne();
+		borns.Add(obj);
 		CountTimer putBackTimer = new CountTimer(10, 1);
 		ptTimers.Add(putBackTimer);
 		putBackTimer.Elapsed += delegate {
 			pool.PutBack(obj);
 			ptTimers.Remove(putBackTimer);
+			borns.Remove(obj);
 				};
 		putBackTimer.Start();
 	}
@@ -47,5 +51,16 @@ public class ObjectSpawner<T>
 			p.Stop();
 		}
 		ptTimers.Clear();
+	}
+
+	void RestartSpawn ()
+	{
+		foreach (var b in borns)
+		{
+			pool.PutBack(b);
+		}
+		borns.Clear();
+		StopSpawn();
+		StartSpawn();
 	}
 }

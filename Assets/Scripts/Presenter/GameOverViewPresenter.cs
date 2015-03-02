@@ -8,7 +8,7 @@ namespace Game.View
 		protected override void InitializeView ()
 		{
 			view.OnReStartGameClick.AddListener(delegate {
-				GameFacade.GameFlow.Resume();
+				GameFacade.GameFlow.Restart();
 				NavTo("InGameView");
 			});
 			view.OnExitClick.AddListener(delegate {
