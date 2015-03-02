@@ -6,15 +6,18 @@ public class MainTest : MonoBehaviour {
 	CountTimer ct;
 
 	// Use this for initialization
-	void Start () {
+	IEnumerator Start () {
 		ct = new CountTimer(5);
 		//ct.TotalCount = 5;
 
 		ct.Elapsed += HandleElapsed;
 		//ct.Start();
 
-		for (int i = 0; i < 1000; i ++)
+		for (int i = 0; i < 3; i ++)
 			StartCoroutine(E ());
+
+		yield return new WaitForSeconds(3);
+		StopCoroutine("E");
 	}
 
 	IEnumerator E()

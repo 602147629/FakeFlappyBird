@@ -14,7 +14,7 @@ namespace Game
 
 		public static IViewFlow ViewFlow;
 
-		private IViewManager viewMgr;
+		public static IViewManager ViewMgr;
 
         public GameFacade()
         {
@@ -29,9 +29,9 @@ namespace Game
 
 		private void InitView()
 		{
-			viewMgr = new U3DViewManager ();
-			viewLoader = new ViewLoader(viewMgr);
-			ViewFlow = viewMgr.ViewFlow;
+			ViewMgr = new U3DViewManager ();
+			viewLoader = new ViewLoader(ViewMgr);
+			ViewFlow = ViewMgr.ViewFlow;
 		}
 
         public void StartGame()

@@ -10,25 +10,36 @@ namespace CX.U3D.MVP.View
 	{		
 		public U3DViewManager ()
 		{
-			viewDic = new Dictionary<string, IView>();
-			viewTypeDic = new Dictionary<Type, IView>();
+			type2ViewDic = new Dictionary<Type, IView>();
+			name2Type = new Dictionary<string, Type>();
+
 			viewFlow = new ViewFlow(this);
 		}
 		
 		public IView GetView(string viewName)
 		{
 			IView view = ViewManagerBase.EmptyView;
-			if (viewDic.ContainsKey(viewName))
+			if (name2Type.ContainsKey(viewName))
 			{
-				view = viewDic[viewName];
+				view = GetView(name2Type[viewName]);
 			}
 			return view;
 		}
 		
-		public TView GetView<TView>(string viewName) where TView : class, IView
+		public TView GetView<TView>() where TView : class, IView
 		{
-			return GetView(viewName) as TView;
-		}	
+			return GetView(typeof(TView)) as TView;
+		}
+
+		IView GetView(Type veiwType)
+		{
+			IView view = ViewManagerBase.EmptyView;
+			if (type2ViewDic.ContainsKey(veiwType))
+			{
+				view = type2ViewDic[veiwType];
+			}
+			return view;
+		}
 		
 		public IView CreateView(object viewResource)
 		{
@@ -43,12 +54,13 @@ namespace CX.U3D.MVP.View
 					view = gameObject.GetComponent<U3DView>();
 					if (view != null)
 					{
-						viewDic.Add (resName, view);
 						view.ViewName = resName;
+						var type = view.GetType ();
+						type2ViewDic.Add (type, view);
+						name2Type.Add (resName, type);
 					}
 				}
 
-				viewTypeDic.Add(view.GetType(), view);
 				var str = "Game.View." + resName + "Presenter";
 				var presType = Type.GetType (str);
 				if (presType != null)
@@ -82,8 +94,8 @@ namespace CX.U3D.MVP.View
 			}
 		}
 		
-		IDictionary<string, IView> viewDic;
-		IDictionary<Type, IView> viewTypeDic;
+		IDictionary<Type, IView> type2ViewDic;
+		IDictionary<string,Type> name2Type;
 		IViewFlow viewFlow;
 	}
 }

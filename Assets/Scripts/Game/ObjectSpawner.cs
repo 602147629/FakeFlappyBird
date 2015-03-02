@@ -1,6 +1,6 @@
 using CX.Obj;
 using System;
-using System.Collections;
+using System.Collections.Generic;
 using Game;
 
 public class ObjectSpawner<T>
@@ -8,6 +8,7 @@ public class ObjectSpawner<T>
 	bool isSpawn;
 	IObjectPool<T> pool;
 	Timer spawnTimer;
+	IList<CountTimer> ptTimers = new List<CountTimer>();
 
 	public ObjectSpawner(IObjectPool<T> pool)
 	{
@@ -24,8 +25,10 @@ public class ObjectSpawner<T>
 	{
 		T obj = pool.GetOne();
 		CountTimer putBackTimer = new CountTimer(10, 1);
+		ptTimers.Add(putBackTimer);
 		putBackTimer.Elapsed += delegate {
 			pool.PutBack(obj);
+			ptTimers.Remove(putBackTimer);
 				};
 		putBackTimer.Start();
 	}
@@ -38,5 +41,11 @@ public class ObjectSpawner<T>
 	public void StopSpawn()
 	{
 		spawnTimer.Stop();
+
+		foreach (var p in ptTimers)
+		{
+			p.Stop();
+		}
+		ptTimers.Clear();
 	}
 }

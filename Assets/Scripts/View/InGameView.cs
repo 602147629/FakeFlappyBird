@@ -8,6 +8,8 @@ namespace Game.View
 		public Button pauseBtn;
 		private Text pausBtnText;
 		public Text countDownText;
+		public TextChangeView lifeChangeText;
+		public TextChangeView scoreChangeText;
 
 		void Awake()
 		{

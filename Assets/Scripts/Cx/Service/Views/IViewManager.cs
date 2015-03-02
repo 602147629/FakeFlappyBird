@@ -18,7 +18,7 @@ namespace CX.MVP.View
 		/// <returns>The view.</returns>
 		/// <param name="viewName">View name.</param>
 		/// <typeparam name="TView">The 1st type parameter.</typeparam>
-		TView GetView<TView>(string viewName) where TView : class, IView;
+		TView GetView<TView>() where TView : class, IView;
 		
 		/// <summary>
 		/// Creates the view.
