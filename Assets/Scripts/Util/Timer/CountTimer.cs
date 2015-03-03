@@ -37,8 +37,8 @@ public class CountTimer : Timer
 	{
 		base.Count ();
 		var last = nowCount == TotalCount;
-		if (last && runOnce)
-			Close();
+		if (last) Stop();
+		if (runOnce) Close();
 		if (TimerFinished != null && last)
 		{
 			TimerFinished(nowCount);
