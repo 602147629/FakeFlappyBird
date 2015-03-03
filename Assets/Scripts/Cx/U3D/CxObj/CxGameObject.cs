@@ -4,10 +4,11 @@ using System;
 
 namespace CX.U3D.Obj
 {
-	public class CxGameObject : IActivable, IGameObject
+	public class CxGameObject : IActivable, IGameObject, IDisposable
 	{
 		private GameObjectBornVO bornVO;
 		private U3DGameObjectView u3dView;
+		private bool isDisposed;
 
 		public CxGameObject (GameObjectBornVO bornVO)
 		{
@@ -40,9 +41,13 @@ namespace CX.U3D.Obj
 			//View.Destroy();
 		}
 
-		public virtual void Destroy()
+		public virtual void Dispose()
 		{
-			GameObject.Destroy(u3dView.gameObject);
+			if (!isDisposed)
+			{
+				GameObject.Destroy(u3dView.gameObject);
+				isDisposed = true;
+			}
 		}
 
 		public virtual IGameObjectView View

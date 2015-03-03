@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CX.U3D.Obj;
+using System;
 
 namespace CX.Obj
 {
@@ -22,7 +23,8 @@ namespace CX.Obj
 			return;
 			foreach (var obj in objList)
 			{
-				obj.Destroy();
+				if (obj is IDisposable)
+					(obj as IDisposable).Dispose();
 			}
 		}
 
