@@ -37,11 +37,12 @@ public class CountTimer : Timer
 	{
 		base.Count ();
 		var last = nowCount == TotalCount;
-		if (last) Stop();
-		if (runOnce) Close();
-		if (TimerFinished != null && last)
+
+		if (last)
 		{
-			TimerFinished(nowCount);
+			Stop ();
+			if (runOnce) Close();
+			if (TimerFinished != null) TimerFinished(nowCount);
 		}
 	}
 
