@@ -21,6 +21,7 @@ namespace Game.Character
 			GameFacade.GameFlow.GameResume += (sender, e) => GameStart();
 			GameFacade.GameFlow.GamePause += (sender, e) => GameStop();
 			GameFacade.GameFlow.GameStop += (sender, e) => GameStop();
+			GameFacade.GameFlow.GameRestart += (sender, e) => GameStart();
 		}
 
 		void GameStart ()
