@@ -8,7 +8,7 @@ namespace CX.U3D.Obj
 	{
 		private GameObjectBornVO bornVO;
 		private U3DGameObjectView u3dView;
-		private bool isDisposed;
+		private bool disposed;
 
 		public CxGameObject (GameObjectBornVO bornVO)
 		{
@@ -41,13 +41,22 @@ namespace CX.U3D.Obj
 			//View.Destroy();
 		}
 
-		public virtual void Dispose()
+		public void Dispose()
 		{
-			if (!isDisposed)
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected virtual void Dispose(bool disposing)
+		{
+			if (disposed) return;
+
+			if (disposing)
 			{
 				GameObject.Destroy(u3dView.gameObject);
-				isDisposed = true;
 			}
+
+			disposed = true;
 		}
 
 		public virtual IGameObjectView View
