@@ -13,7 +13,7 @@ public class Loop : MonoBehaviour
 
 	void Awake()
 	{
-		gameObject.AddComponent<DontDestroy>();
+		DontDestroyOnLoad(gameObject);
 	}
 
 	void Update()

@@ -8,6 +8,16 @@ namespace Game
 	{
 		static Action LoadCompleted;
 
+		static LevelLoader()
+		{
+			new GameObject("LevelLoader").AddComponent<LevelLoader>();
+		}
+
+		void Awake()
+		{
+			DontDestroyOnLoad(gameObject);
+		}
+
 		public static void LoadLevel(string levelName)
 		{
 			Application.LoadLevel(levelName);

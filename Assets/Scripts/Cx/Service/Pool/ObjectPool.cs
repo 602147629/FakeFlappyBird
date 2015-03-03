@@ -19,10 +19,18 @@ namespace CX.Obj
 
 		protected virtual void InitPool()
 		{
-			for (int i = 0; i < poolCount; i++)
-			{
-				CreatePoolObj();
-			}
+//			for (int i = 0; i < poolCount; i++)
+//			{
+//				CreatePoolObj();
+//			}
+			Loop.UpdateEvent += HandleUpdateEvent;
+		}
+
+		void HandleUpdateEvent ()
+		{
+			CreatePoolObj();
+			if (queues.Count >= poolCount)
+				Loop.UpdateEvent -= HandleUpdateEvent;
 		}
 
 		protected virtual void CreatePoolObj()
