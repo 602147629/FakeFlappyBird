@@ -52,6 +52,7 @@ public class CountTimer : Timer
 		{
 			return base.IsEnabled && nowCount < TotalCount;
 		}
+		set { base.IsEnabled = value; }
 	}
 }
 

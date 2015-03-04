@@ -44,7 +44,7 @@ public class Timer
 
 	void Updating()
 	{
-		if (Time.time > nextTime)
+		if (IsEnabled && Time.time > nextTime)
 		{
 			nextTime = Time.time + Interval;
 			if (Elapsed != null)
@@ -58,6 +58,7 @@ public class Timer
 	public virtual bool IsEnabled
 	{
 		get { return isEnabled; }
+		set { isEnabled = value; }
 	}
 
 	protected virtual void Count()

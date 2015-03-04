@@ -17,7 +17,7 @@ public class ValueChage<T> : IValueChange<T>
 {
 	T _value;
 
-	public ValueChage (T value)
+	public ValueChage (T value = default(T))
 	{
 		this._value = value;
 	}
@@ -40,6 +40,11 @@ public class ValueChage<T> : IValueChange<T>
 	public void RemoveListenr(IValueListener<T> listner)
 	{
 		listners.Remove(listner);
+	}
+
+	public void ClearListeners()
+	{
+		listners.Clear();
 	}
 
 	void Change(T newValue)

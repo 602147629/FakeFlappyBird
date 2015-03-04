@@ -28,6 +28,8 @@ public class GameFlowController : IGameFlow
 	
 	public void Start()
 	{
+		new GameScore();
+
 		LevelLoader.LoadLevel(LevelConfig.LEVEL, delegate() {
 
 			CxObjContainer objContainer = new CxObjContainer();
