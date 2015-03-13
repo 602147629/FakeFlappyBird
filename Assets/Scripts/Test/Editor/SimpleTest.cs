@@ -2,6 +2,8 @@ using System;
 using NUnit.Framework;
 using CX;
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace SimpleTest
 {
@@ -103,6 +105,33 @@ namespace SimpleTest
 			del();
 			del += StDel;
 			del();
+
+
+		}
+
+		[Test]
+		public void JustTest()
+		{
+			GameScoreList gs = new GameScoreList();
+
+			for (int i = 0; i < 20; i ++)
+			{
+				gs.AddScore(UnityEngine.Random.Range(0, 9));
+			}
+
+			foreach (var g in gs.ScoreList)
+			{
+				Debug.Log(g);
+			}
+
+			Debug.Log("-----");
+
+			gs.AddScore(23);
+			gs.AddScore(11);
+			foreach (var g in gs.ScoreList)
+			{
+				Debug.Log(g);
+			}
 
 
 		}

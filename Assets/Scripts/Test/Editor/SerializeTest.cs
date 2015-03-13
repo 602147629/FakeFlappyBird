@@ -16,7 +16,7 @@ namespace UtilTest
 		public void SetUp()
 		{
 			serializer = new DataSerializer(); 
-			ts = new TestSerialize();
+			ts = new TestSerialize(4);
 			ts.i = 5;
 			ts.s = "xxx";
 
@@ -36,14 +36,26 @@ namespace UtilTest
 			Assert.AreEqual(t.i, 5);
 			Assert.AreEqual(t.s, "xxx");
 			Assert.AreEqual(t.ts2.lst[0], "a");
+			t.JJ ();
 		}
 
 		[Serializable]
 		class TestSerialize
 		{
+			public TestSerialize(int j)
+			{
+				this.j = j;
+			}
+
 			public int i;
 			public string s;
 			public TestSerialize2 ts2;
+			private int j;
+
+			public void JJ()
+			{
+				Assert.AreEqual(j, 3);
+			}
 		}
 
 		[Serializable]
