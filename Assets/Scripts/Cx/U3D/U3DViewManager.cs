@@ -51,6 +51,7 @@ namespace CX.U3D.MVP.View
 				var gameObject = GameObject.Instantiate (res) as GameObject;
 				if (gameObject != null)
 				{
+					if (gameObject.activeSelf) gameObject.SetActive(false);
 					view = gameObject.GetComponent<U3DView>();
 					if (view != null)
 					{
